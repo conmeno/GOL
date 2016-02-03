@@ -19,7 +19,6 @@
 		91D8046D19AD02FC00EBAE80 /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046C19AD02FC00EBAE80 /* TileModel.swift */; };
 		91D8046F19AD22D000EBAE80 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046E19AD22D000EBAE80 /* Helpers.swift */; };
 		91D8047519AD330E00EBAE80 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */; };
-		9608AFDD1C589F00003FFEEE /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9608AFDC1C589F00003FFEEE /* Chartboost.framework */; };
 		967976D51C52266D00C53618 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 967976D31C52266D00C53618 /* cclass.m */; };
 		967976D61C52266D00C53618 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967976D41C52266D00C53618 /* Data.swift */; };
 		967976D91C522A3900C53618 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976D81C522A3900C53618 /* UIKit.framework */; };
@@ -38,7 +37,8 @@
 		967976F41C522A8700C53618 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976F11C522A8700C53618 /* AudioToolbox.framework */; };
 		967976F51C522A8700C53618 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976F21C522A8700C53618 /* AVFoundation.framework */; };
 		967976F71C522A8F00C53618 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976F61C522A8F00C53618 /* CoreMedia.framework */; };
-		967976F91C522AAF00C53618 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976F81C522AAF00C53618 /* GoogleMobileAds.framework */; };
+		96DD2D171C6202A80053EDF7 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DD2D151C6202A80053EDF7 /* Chartboost.framework */; };
+		96DD2D181C6202A90053EDF7 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DD2D161C6202A80053EDF7 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		91D8046E19AD22D000EBAE80 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		91D8047019AD2AE800EBAE80 /* Conway's Game of Life-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Conway's Game of Life-Bridging-Header.h"; sourceTree = "<group>"; };
 		91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
-		9608AFDC1C589F00003FFEEE /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		967976D21C52266D00C53618 /* cclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cclass.h; sourceTree = "<group>"; };
 		967976D31C52266D00C53618 /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cclass.m; sourceTree = "<group>"; };
 		967976D41C52266D00C53618 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -90,7 +89,8 @@
 		967976F11C522A8700C53618 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		967976F21C522A8700C53618 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		967976F61C522A8F00C53618 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		967976F81C522AAF00C53618 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		96DD2D151C6202A80053EDF7 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		96DD2D161C6202A80053EDF7 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				967976F91C522AAF00C53618 /* GoogleMobileAds.framework in Frameworks */,
+				96DD2D181C6202A90053EDF7 /* GoogleMobileAds.framework in Frameworks */,
 				967976F71C522A8F00C53618 /* CoreMedia.framework in Frameworks */,
 				967976F31C522A8700C53618 /* AdSupport.framework in Frameworks */,
-				9608AFDD1C589F00003FFEEE /* Chartboost.framework in Frameworks */,
 				967976F41C522A8700C53618 /* AudioToolbox.framework in Frameworks */,
+				96DD2D171C6202A80053EDF7 /* Chartboost.framework in Frameworks */,
 				967976F51C522A8700C53618 /* AVFoundation.framework in Frameworks */,
 				967976EF1C522A7900C53618 /* CoreBluetooth.framework in Frameworks */,
 				967976EC1C522A7100C53618 /* CoreGraphics.framework in Frameworks */,
@@ -132,8 +132,8 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
-				9608AFDC1C589F00003FFEEE /* Chartboost.framework */,
-				967976F81C522AAF00C53618 /* GoogleMobileAds.framework */,
+				96DD2D151C6202A80053EDF7 /* Chartboost.framework */,
+				96DD2D161C6202A80053EDF7 /* GoogleMobileAds.framework */,
 				967976F61C522A8F00C53618 /* CoreMedia.framework */,
 				967976F01C522A8700C53618 /* AdSupport.framework */,
 				967976F11C522A8700C53618 /* AudioToolbox.framework */,
@@ -448,7 +448,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
@@ -470,7 +470,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
