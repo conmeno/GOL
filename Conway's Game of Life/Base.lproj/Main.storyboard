@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuh-vg-u3s">
-                                <rect key="frame" x="16" y="550" width="82" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuh-vg-u3s">
+                                <rect key="frame" x="20" y="550" width="82" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.1493335969" blue="0.69161796320000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="Ezh-Ac-7n6"/>
@@ -29,6 +29,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="StartDrag:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="MXQ-ul-OYl"/>
                                     <action selector="_startStop" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hS3-iZ-Jrb"/>
                                 </connections>
                             </button>

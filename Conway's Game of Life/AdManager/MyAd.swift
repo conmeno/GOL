@@ -119,8 +119,8 @@ class MyAd:NSObject {
     {
         //let viewController = appDelegate1.window!.rootViewController as! GameViewController
         let w = viewController.view.bounds.width
-        let h = viewController.view.bounds.height
-        gBannerView = GADBannerView(frame: CGRectMake(0, h - 50 , w, 50))
+        //let h = viewController.view.bounds.height
+        gBannerView = GADBannerView(frame: CGRectMake(0, 20 , w, 50))
         gBannerView?.adUnitID = data.gBanner
         gBannerView?.delegate = nil
         gBannerView?.rootViewController = viewController
