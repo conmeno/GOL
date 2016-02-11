@@ -8,7 +8,7 @@
 
 import Foundation
 import GoogleMobileAds
-class MyAd:NSObject {
+class MyAd:NSObject, GADBannerViewDelegate {
     
         
     let viewController:UIViewController
@@ -122,7 +122,7 @@ class MyAd:NSObject {
         //let h = viewController.view.bounds.height
         gBannerView = GADBannerView(frame: CGRectMake(0, 20 , w, 50))
         gBannerView?.adUnitID = data.gBanner
-        gBannerView?.delegate = nil
+        gBannerView?.delegate = self
         gBannerView?.rootViewController = viewController
         viewController.view?.addSubview(gBannerView)
         let request = GADRequest()
@@ -261,6 +261,34 @@ class MyAd:NSObject {
     
     
     
+    //GADBannerViewDelegate
+    func adViewDidReceiveAd(view: GADBannerView!) {
+        print("adViewDidReceiveAd:\(view)");
+        
+        //relayoutViews()
+    }
     
+    func adView(view: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+        print("\(view) error:\(error)")
+        
+        //relayoutViews()
+    }
+    
+    func adViewWillPresentScreen(adView: GADBannerView!) {
+        print("adViewWillPresentScreen:\(adView)")
+        
+        //relayoutViews()
+    }
+    
+    func adViewWillLeaveApplication(adView: GADBannerView!) {
+        print("adViewWillLeaveApplication:\(adView)")
+    }
+    
+    func adViewWillDismissScreen(adView: GADBannerView!) {
+        print("adViewWillDismissScreen:\(adView)")
+        
+        // relayoutViews()
+    }
+
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B65C4E01C6B832A00111B76 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B65C4DE1C6B832A00111B76 /* Chartboost.framework */; };
+		1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */; };
 		91060A0B19ACE35A001FDC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0A19ACE35A001FDC9D /* AppDelegate.swift */; };
 		91060A0D19ACE35A001FDC9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0C19ACE35A001FDC9D /* ViewController.swift */; };
 		91060A1019ACE35A001FDC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91060A0E19ACE35A001FDC9D /* Main.storyboard */; };
@@ -32,7 +34,6 @@
 		9670A92D1C64926600EEF360 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9670A92C1C64926600EEF360 /* WebKit.framework */; };
 		967976D91C522A3900C53618 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976D81C522A3900C53618 /* UIKit.framework */; };
 		967976DB1C522A3F00C53618 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976DA1C522A3F00C53618 /* SystemConfiguration.framework */; };
-		967976DD1C522A4600C53618 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976DC1C522A4600C53618 /* StoreKit.framework */; };
 		967976DF1C522A4C00C53618 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976DE1C522A4C00C53618 /* MessageUI.framework */; };
 		967976E11C522A5300C53618 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976E01C522A5300C53618 /* MediaPlayer.framework */; };
 		967976E31C522A5800C53618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967976E21C522A5800C53618 /* Foundation.framework */; };
@@ -59,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B65C4DE1C6B832A00111B76 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		91060A0519ACE35A001FDC9D /* Conway's GoL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GoL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91060A0919ACE35A001FDC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91060A0A19ACE35A001FDC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		9670A92C1C64926600EEF360 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		967976D81C522A3900C53618 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		967976DA1C522A3F00C53618 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		967976DC1C522A4600C53618 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		967976DE1C522A4C00C53618 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		967976E01C522A5300C53618 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		967976E21C522A5800C53618 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +118,7 @@
 				9670A9281C64923400EEF360 /* libsqlite3.0.tbd in Frameworks */,
 				9670A9291C64923400EEF360 /* libsqlite3.tbd in Frameworks */,
 				9670A9251C647E8E00EEF360 /* GoogleMobileAds.framework in Frameworks */,
+				1B65C4E01C6B832A00111B76 /* Chartboost.framework in Frameworks */,
 				967976F71C522A8F00C53618 /* CoreMedia.framework in Frameworks */,
 				967976F31C522A8700C53618 /* AdSupport.framework in Frameworks */,
 				967976F41C522A8700C53618 /* AudioToolbox.framework in Frameworks */,
@@ -128,9 +131,9 @@
 				967976E61C522A6000C53618 /* EventKit.framework in Frameworks */,
 				967976E71C522A6000C53618 /* EventKitUI.framework in Frameworks */,
 				967976E31C522A5800C53618 /* Foundation.framework in Frameworks */,
+				1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */,
 				967976E11C522A5300C53618 /* MediaPlayer.framework in Frameworks */,
 				967976DF1C522A4C00C53618 /* MessageUI.framework in Frameworks */,
-				967976DD1C522A4600C53618 /* StoreKit.framework in Frameworks */,
 				967976DB1C522A3F00C53618 /* SystemConfiguration.framework in Frameworks */,
 				967976D91C522A3900C53618 /* UIKit.framework in Frameworks */,
 			);
@@ -149,6 +152,8 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
+				1B65C4DE1C6B832A00111B76 /* Chartboost.framework */,
+				1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */,
 				9670A92C1C64926600EEF360 /* WebKit.framework */,
 				9670A92A1C64924100EEF360 /* Security.framework */,
 				9670A9261C64923400EEF360 /* libsqlite3.0.tbd */,
@@ -168,7 +173,6 @@
 				967976E21C522A5800C53618 /* Foundation.framework */,
 				967976E01C522A5300C53618 /* MediaPlayer.framework */,
 				967976DE1C522A4C00C53618 /* MessageUI.framework */,
-				967976DC1C522A4600C53618 /* StoreKit.framework */,
 				967976DA1C522A3F00C53618 /* SystemConfiguration.framework */,
 				967976D81C522A3900C53618 /* UIKit.framework */,
 				91060A0719ACE35A001FDC9D /* Conway's Game of Life */,
@@ -297,6 +301,11 @@
 					91060A0419ACE35A001FDC9D = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 6SZC32EP3F;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					91060A1619ACE35A001FDC9D = {
 						CreatedOnToolsVersion = 6.0;
@@ -479,16 +488,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "game3007.Conway-s-Game-of-Life";
 				PRODUCT_NAME = "Conway's GoL";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Conway's Game of Life/AdManager/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -501,16 +512,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Conway's Game of Life $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR) $(PROJECT_DIR)",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "game3007.Conway-s-Game-of-Life";
 				PRODUCT_NAME = "Conway's GoL";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Conway's Game of Life/AdManager/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
