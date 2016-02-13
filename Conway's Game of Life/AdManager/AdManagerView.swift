@@ -15,11 +15,12 @@ class AdManagerView: UIViewController
 {
     
     
-    var isAd1 = true
-    var isAd2 = true
-    var isAd3 = false
-    var isAd4 = false
-    
+    var isAd1 = true//admob full
+    var isAd2 = false//charbootst
+    var isAd3 = false//auto chartboost
+    var isAd4 = true//admob banner
+    var isAd5 = false//adcolony
+    var isAd6 = true//amazon
     
     @IBOutlet weak var sw1: UISwitch!
     
@@ -28,6 +29,12 @@ class AdManagerView: UIViewController
     @IBOutlet weak var sw3: UISwitch!
     
     @IBOutlet weak var sw4: UISwitch!
+    
+    @IBOutlet weak var sw5: UISwitch!
+    
+    @IBOutlet weak var sw6: UISwitch!
+    
+    
     @IBOutlet weak var textDevice: UITextView!
     
     @IBAction func sw1Action(sender: UISwitch) {
@@ -56,6 +63,20 @@ class AdManagerView: UIViewController
         NSUserDefaults.standardUserDefaults().synchronize()
         isAd4 = sender.on
     }
+    
+    @IBAction func sw5Action(sender: UISwitch) {
+        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad4")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        isAd5 = sender.on
+    }
+
+    
+    @IBAction func sw6Action(sender: UISwitch) {
+        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad4")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        isAd6 = sender.on
+    }
+
     
     
     
@@ -119,10 +140,24 @@ class AdManagerView: UIViewController
             
         }
         
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad5") != nil)
+        {
+            isAd5 = NSUserDefaults.standardUserDefaults().objectForKey("ad5") as! Bool
+            
+        }
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad6") != nil)
+        {
+            isAd6 = NSUserDefaults.standardUserDefaults().objectForKey("ad6") as! Bool
+            
+        }
+        
         sw1.on = isAd1
         sw2.on = isAd2
         sw3.on = isAd3
         sw4.on = isAd4
+        sw5.on = isAd5
+        sw6.on = isAd6
         
     }
 

@@ -21,7 +21,7 @@ class Data {
     
         let gBanner : String = "ca-app-pub-2767935542217864/4801527832"
         let gFull : String = "ca-app-pub-2767935542217864/6278261035"
-        let TestDeviceID: String = "12d7a54f9646b17dab2a691b5bb24e43"
+        let TestDeviceID: String = "2a5ffb5329ec2a8dc3a0b58ed8b71ebf"
         let cAppID: String = "56bc87e804b01664a9e8dc39"
         let cSign : String = "603ebca4668b11528027d0edb74150f43f12d69f"
     

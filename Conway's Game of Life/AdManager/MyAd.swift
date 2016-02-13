@@ -8,7 +8,7 @@
 
 import Foundation
 import GoogleMobileAds
-class MyAd:NSObject, GADBannerViewDelegate {
+class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate {
     
         
     let viewController:UIViewController
@@ -18,15 +18,18 @@ class MyAd:NSObject, GADBannerViewDelegate {
     var timerVPN:NSTimer?
     var timerAd10:NSTimer?
     var timerAd60:NSTimer?
+    var timerAmazon:NSTimer?
     
-    var isAd1 = true
-    var isAd2 = true
-    var isAd3 = false
-    var isAd4 = false
+    var isAd1 = true//admob full
+    var isAd2 = false//charbootst
+    var isAd3 = false//auto chartboost
+    var isAd4 = true//admob banner
+    var isAd5 = false//adcolony
+    var isAd6 = true//amazon
     
     var isFirsAdmob = false
     var isFirstChart = false
-    
+    var amazonLocationY:CGFloat = -50.0
     var AdNumber = 1
     let data = Data()
     
@@ -42,7 +45,11 @@ class MyAd:NSObject, GADBannerViewDelegate {
         CheckAdOptionValue()
         if(showAd())
         {
-            ShowAdmobBanner()
+            if(isAd4)
+            {
+                ShowAdmobBanner()
+                self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
+            }
             if(isAd1)
             {
                 self.interstitial = self.createAndLoadAd()
@@ -50,11 +57,11 @@ class MyAd:NSObject, GADBannerViewDelegate {
             }
            
             
-            self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
             
-            self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAD10:", userInfo: nil, repeats: true)
-            
-            
+            if(isAd1 || isAd2)
+            {
+                self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAD10:", userInfo: nil, repeats: true)
+            }
             
             if(isAd2)
             {
@@ -63,6 +70,12 @@ class MyAd:NSObject, GADBannerViewDelegate {
             if(isAd3)
             {
                 self.timerAd60 = NSTimer.scheduledTimerWithTimeInterval(90, target: self, selector: "timerAD60:", userInfo: nil, repeats: true)
+            }
+            
+            if(isAd6)
+            {
+            showAmazonBanner()
+                self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
             }
         }
         
@@ -177,7 +190,19 @@ class MyAd:NSObject, GADBannerViewDelegate {
             
         }
         
-       
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad5") != nil)
+        {
+            isAd5 = NSUserDefaults.standardUserDefaults().objectForKey("ad5") as! Bool
+            
+        }
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad6") != nil)
+        {
+            isAd6 = NSUserDefaults.standardUserDefaults().objectForKey("ad6") as! Bool
+            
+        }
+        
+      
         
     }
     
@@ -290,5 +315,78 @@ class MyAd:NSObject, GADBannerViewDelegate {
         // relayoutViews()
     }
 
+    
+    
+    
+    //amazon
+    ///////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////
+    @IBOutlet var amazonAdView: AmazonAdView!
+    func showAmazonBanner()
+    {
+        amazonAdView = AmazonAdView(adSize: AmazonAdSize_320x50)
+        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
+        amazonAdView.delegate = nil
+        viewController.view.addSubview(amazonAdView)
+    }
+    
+    
+    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
+        
+        let options = AmazonAdOptions()
+        options.isTestRequest = false
+        let x = (viewController.view.bounds.width - 320)/2
+        //viewController.view.bounds.height - 50
+        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
+            amazonAdView.frame = CGRectMake(x, amazonLocationY, 320, 50)
+        } else {
+            amazonAdView.removeFromSuperview()
+            
+            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
+                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
+                amazonAdView.frame = CGRectMake((viewController.view.bounds.width-728.0)/2.0, amazonLocationY, 728.0, 90.0)
+            } else {
+                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
+                amazonAdView.frame = CGRectMake((viewController.view.bounds.width-1024.0)/2.0, amazonLocationY, 1024.0, 50.0)
+            }
+            viewController.view.addSubview(amazonAdView)
+            amazonAdView.delegate = nil
+        }
+        
+        amazonAdView.loadAd(options)
+    }
+    func timerMethodAutoAmazon(timer:NSTimer) {
+        print("auto load amazon")
+        if(showAd())
+        {
+showAmazonBanner()
+        }
+        
+        
+    }
+    
+    // Mark: - AmazonAdViewDelegate
+    func viewControllerForPresentingModalView() -> UIViewController {
+        return viewController
+    }
+    
+    func adViewDidLoad(view: AmazonAdView!) -> Void {
+        viewController.view.addSubview(amazonAdView)
+    }
+    
+    func adViewDidFailToLoad(view: AmazonAdView!, withError: AmazonAdError!) -> Void {
+        print("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
+    }
+    
+    func adViewWillExpand(view: AmazonAdView!) -> Void {
+        print("Ad will expand")
+    }
+    
+    func adViewDidCollapse(view: AmazonAdView!) -> Void {
+        print("Ad has collapsed")
+    }
+
+////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
     
 }

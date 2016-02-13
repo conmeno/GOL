@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B5C03311C6CD2C500416BA8 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5C03301C6CD2C500416BA8 /* Chartboost.framework */; };
+		1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */; };
 		1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */; };
 		91060A0B19ACE35A001FDC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0A19ACE35A001FDC9D /* AppDelegate.swift */; };
 		91060A0D19ACE35A001FDC9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0C19ACE35A001FDC9D /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		1B5C03301C6CD2C500416BA8 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
 		1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		91060A0519ACE35A001FDC9D /* Conway's GOL 1970.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GOL 1970.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91060A0919ACE35A001FDC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				967976E91C522A6800C53618 /* CoreTelephony.framework in Frameworks */,
 				967976E61C522A6000C53618 /* EventKit.framework in Frameworks */,
 				967976E71C522A6000C53618 /* EventKitUI.framework in Frameworks */,
+				1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */,
 				967976E31C522A5800C53618 /* Foundation.framework in Frameworks */,
 				1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */,
 				967976E11C522A5300C53618 /* MediaPlayer.framework in Frameworks */,
@@ -152,6 +155,7 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
+				1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */,
 				1B5C03301C6CD2C500416BA8 /* Chartboost.framework */,
 				1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */,
 				9670A92C1C64926600EEF360 /* WebKit.framework */,
@@ -497,7 +501,7 @@
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "game3008.Conway-s-Game-of-Life-1970";
+				PRODUCT_BUNDLE_IDENTIFIER = "htmlgame3008.Conway-s-Game-of-Life-1970";
 				PRODUCT_NAME = "Conway's GOL 1970";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Conway's Game of Life/AdManager/Bridging-header.h";
@@ -521,7 +525,7 @@
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "game3008.Conway-s-Game-of-Life-1970";
+				PRODUCT_BUNDLE_IDENTIFIER = "htmlgame3008.Conway-s-Game-of-Life-1970";
 				PRODUCT_NAME = "Conway's GOL 1970";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Conway's Game of Life/AdManager/Bridging-header.h";
