@@ -15,7 +15,7 @@ class Utility {
     static var isAd3 = false//auto chartboost
     static var isAd4 = true//admob banner //ok
     static var isAd5 = false//adcolony      //ok
-    static var isAd6 = false//amazon     //ok
+    static var isAd6 = true//amazon     //ok
     static var isAd7 = false//REvmob    //ok
     static var isAd8 = false//VungLe    /not show
     static var isAd9 = false//Applovin  //ok
@@ -35,7 +35,7 @@ class Utility {
     
     static var isStopAdmobAD = false
     
-    static var showOtherAd = false //showAd (ngoai tru Admob Banner)
+    static var showOtherAd = true //showAd (ngoai tru Admob Banner)
     static func OpenView(viewName: String, view: UIViewController)
     {
         let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
@@ -266,6 +266,9 @@ class Utility {
             if(tempCDMA == "true")
             {
              showOtherAd = true
+            }else
+            {
+            showOtherAd = false
             }
             
         }
