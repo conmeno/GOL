@@ -98,7 +98,7 @@ public class CGOLModel: NSObject {
         }
         
         // Finally, toggle the fields that must be toggled
-        for (x, y, tile) in _tiles {            
+        for (_, _, tile) in _tiles {            
             if tile.shouldToggleState {
                 tile.alive = !tile.alive
                 tile.shouldToggleState = false
