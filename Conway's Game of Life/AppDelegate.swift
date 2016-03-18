@@ -12,10 +12,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         // Override point for customization after application launch.
         
         
-         Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
+        Utility.SetUpAdData()
         
-        AmazonAdRegistration.sharedRegistration().setAppKey("0bed35be5ed04f2f821fd2cdd5b35627")
-        AmazonAdRegistration.sharedRegistration().setLogging(true)
+        if(Utility.isAd2)
+        {
+            Chartboost.startWithAppId(Utility.ChartboostAppID, appSignature: Utility.ChartboostSign, delegate: self)
+        }
+        
+        if(Utility.isAd6)
+        {
+            AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
+            AmazonAdRegistration.sharedRegistration().setLogging(true)
+        }
+        
+        if(Utility.isAd8)
+        {
+            
+            //vungle
+            //let sdk = VungleSDK.sharedSDK()
+            //sdk.startWithAppId(Utility.VungleID)
+        }
+        
+        
+        
+        //applovin
+        if(Utility.isAd9)
+        {
+            ALSdk.initializeSdk()
+        }
+        
+        if(Utility.isAd5)
+        {
+            AdColony.configureWithAppID(Utility.AdcolonyAppID, zoneIDs: [Utility.AdcolonyZoneID], delegate: nil, logging: true)
+        }
         
         return true
     }

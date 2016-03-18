@@ -22,9 +22,10 @@ class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myAd = MyAd(root: self)
+        let myad = MyAd(root: self)
+        myad.ViewDidload()
         
-        myAd.ViewDidload()
+
        
         
         _scrollView.addSubview(_gameView)
@@ -43,12 +44,7 @@ class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelega
     
     @IBAction func StartDrag(sender: AnyObject) {
         
-        let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
-        
-        let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("AdView1") as UIViewController
-        
-        self.presentViewController(WebDetailView, animated: true, completion: nil)
-
+        Utility.OpenView("AdView1",view: self)
     }
     
     
