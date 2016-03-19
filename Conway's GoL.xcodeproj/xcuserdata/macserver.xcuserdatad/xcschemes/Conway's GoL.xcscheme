@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91060A0419ACE35A001FDC9D"
-               BuildableName = "Conway&apos;s GOL 1970.app"
-               BlueprintName = "Conway&apos;s GOL 1970"
-               ReferencedContainer = "container:Conway&apos;s GOL 1970.xcodeproj">
+               BuildableName = "Conway&apos;s GoL.app"
+               BlueprintName = "Conway&apos;s GoL"
+               ReferencedContainer = "container:Conway&apos;s GoL.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91060A0419ACE35A001FDC9D"
-            BuildableName = "Conway&apos;s GOL 1970.app"
-            BlueprintName = "Conway&apos;s GOL 1970"
-            ReferencedContainer = "container:Conway&apos;s GOL 1970.xcodeproj">
+            BuildableName = "Conway&apos;s GoL.app"
+            BlueprintName = "Conway&apos;s GoL"
+            ReferencedContainer = "container:Conway&apos;s GoL.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91060A0419ACE35A001FDC9D"
-            BuildableName = "Conway&apos;s GOL 1970.app"
-            BlueprintName = "Conway&apos;s GOL 1970"
-            ReferencedContainer = "container:Conway&apos;s GOL 1970.xcodeproj">
+            BuildableName = "Conway&apos;s GoL.app"
+            BlueprintName = "Conway&apos;s GoL"
+            ReferencedContainer = "container:Conway&apos;s GoL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91060A0419ACE35A001FDC9D"
-            BuildableName = "Conway&apos;s GOL 1970.app"
-            BlueprintName = "Conway&apos;s GOL 1970"
-            ReferencedContainer = "container:Conway&apos;s GOL 1970.xcodeproj">
+            BuildableName = "Conway&apos;s GoL.app"
+            BlueprintName = "Conway&apos;s GoL"
+            ReferencedContainer = "container:Conway&apos;s GoL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
