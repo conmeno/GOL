@@ -14,8 +14,8 @@ class Utility {
     static var isAd2 = false//charbootst
     static var isAd3 = false//auto chartboost
     static var isAd4 = true//admob banner //ok
-    static var isAd5 = false//adcolony      //ok
-    static var isAd6 = true//amazon     //ok
+    static var isAd5 = true//adcolony      //ok
+    static var isAd6 = false//amazon     //ok
     static var isAd7 = false//REvmob    //ok
     static var isAd8 = false//VungLe    /not show
     static var isAd9 = false//Applovin  //ok
