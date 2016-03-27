@@ -3,7 +3,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
     let data = Data()
@@ -12,39 +12,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         // Override point for customization after application launch.
         
         
+        
         Utility.SetUpAdData()
         
-        if(Utility.isAd2)
-        {
-            Chartboost.startWithAppId(Utility.ChartboostAppID, appSignature: Utility.ChartboostSign, delegate: self)
-        }
         
-        if(Utility.isAd6)
-        {
-            AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
-            AmazonAdRegistration.sharedRegistration().setLogging(true)
-        }
-        
-        if(Utility.isAd8)
-        {
-            
-            //vungle
-            //let sdk = VungleSDK.sharedSDK()
-            //sdk.startWithAppId(Utility.VungleID)
-        }
+        //if(Utility.isAd3)
+        //{
+        AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
+        AmazonAdRegistration.sharedRegistration().setLogging(true)
+        //}
         
         
-        
-        //applovin
-        if(Utility.isAd9)
-        {
-            ALSdk.initializeSdk()
-        }
-        
-        if(Utility.isAd5)
+        if(Utility.isAd4)
         {
             AdColony.configureWithAppID(Utility.AdcolonyAppID, zoneIDs: [Utility.AdcolonyZoneID], delegate: nil, logging: true)
         }
+
         
         return true
     }

@@ -13,11 +13,11 @@ class Data {
     //Snake 1998 game
     
     //URL setup online
-    let AdURL: String = "http://www.tony.somee.com/golclassic.txt"
+    let AdURL: String = "http://www.tony.somee.com/golclassic-v2.txt"
     
     //google
-    let gBanner : String = "ca-app-pub-4256755407104807/8634353378"
-    let gFull : String = "ca-app-pub-4256755407104807/1111086577"
+    let gBanner : String = "ca-app-pub-6874226329638875/5130499549"
+    let gFull : String = ""
     let TestDeviceID: String = "25229a4d09c90bcec58dec27036a470b"
     
     
