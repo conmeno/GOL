@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B5C03311C6CD2C500416BA8 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5C03301C6CD2C500416BA8 /* Chartboost.framework */; };
 		1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */; };
 		1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */; };
 		91060A0B19ACE35A001FDC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0A19ACE35A001FDC9D /* AppDelegate.swift */; };
@@ -22,9 +21,6 @@
 		91D8046D19AD02FC00EBAE80 /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046C19AD02FC00EBAE80 /* TileModel.swift */; };
 		91D8046F19AD22D000EBAE80 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046E19AD22D000EBAE80 /* Helpers.swift */; };
 		91D8047519AD330E00EBAE80 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */; };
-		966A05021C9BBB3600A11F57 /* applovin in Resources */ = {isa = PBXBuildFile; fileRef = 966A04FF1C9BBB3600A11F57 /* applovin */; };
-		966A05031C9BBB3600A11F57 /* libAppLovinSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A05001C9BBB3600A11F57 /* libAppLovinSdk.a */; };
-		966A05041C9BBB3600A11F57 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A05011C9BBB3600A11F57 /* RevMobAds.framework */; };
 		966A050F1C9BBB7600A11F57 /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A05061C9BBB7600A11F57 /* AdManagerView.swift */; };
 		966A05101C9BBB7600A11F57 /* ADXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A05071C9BBB7600A11F57 /* ADXML.swift */; };
 		966A05111C9BBB7600A11F57 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 966A050A1C9BBB7600A11F57 /* cclass.m */; };
@@ -40,7 +36,6 @@
 		966A05211C9BBCC400A11F57 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A05201C9BBCC400A11F57 /* AdColony.framework */; };
 		966A05231C9BBD4500A11F57 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A05221C9BBD4500A11F57 /* CoreData.framework */; };
 		966A05251C9BBD5600A11F57 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A05241C9BBD5600A11F57 /* Social.framework */; };
-		9670A9241C647E8E00EEF360 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9670A9221C647E8E00EEF360 /* Chartboost.framework */; };
 		9670A9251C647E8E00EEF360 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9670A9231C647E8E00EEF360 /* GoogleMobileAds.framework */; };
 		9670A9281C64923400EEF360 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9670A9261C64923400EEF360 /* libsqlite3.0.tbd */; };
 		9670A9291C64923400EEF360 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9670A9271C64923400EEF360 /* libsqlite3.tbd */; };
@@ -74,7 +69,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B5C03301C6CD2C500416BA8 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
 		1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		91060A0519ACE35A001FDC9D /* Conway's GOL 1970.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GOL 1970.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,9 +87,6 @@
 		91D8046C19AD02FC00EBAE80 /* TileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileModel.swift; sourceTree = "<group>"; };
 		91D8046E19AD22D000EBAE80 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
-		966A04FF1C9BBB3600A11F57 /* applovin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = applovin; sourceTree = "<group>"; };
-		966A05001C9BBB3600A11F57 /* libAppLovinSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppLovinSdk.a; sourceTree = "<group>"; };
-		966A05011C9BBB3600A11F57 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		966A05061C9BBB7600A11F57 /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
 		966A05071C9BBB7600A11F57 /* ADXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADXML.swift; path = AdManager/ADXML.swift; sourceTree = "<group>"; };
 		966A05081C9BBB7600A11F57 /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
@@ -113,7 +104,6 @@
 		966A05201C9BBCC400A11F57 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
 		966A05221C9BBD4500A11F57 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		966A05241C9BBD5600A11F57 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		9670A9221C647E8E00EEF360 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		9670A9231C647E8E00EEF360 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		9670A9261C64923400EEF360 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		9670A9271C64923400EEF360 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -158,16 +148,12 @@
 				9670A9281C64923400EEF360 /* libsqlite3.0.tbd in Frameworks */,
 				9670A9291C64923400EEF360 /* libsqlite3.tbd in Frameworks */,
 				9670A9251C647E8E00EEF360 /* GoogleMobileAds.framework in Frameworks */,
-				1B5C03311C6CD2C500416BA8 /* Chartboost.framework in Frameworks */,
 				967976F31C522A8700C53618 /* AdSupport.framework in Frameworks */,
 				967976F41C522A8700C53618 /* AudioToolbox.framework in Frameworks */,
-				966A05031C9BBB3600A11F57 /* libAppLovinSdk.a in Frameworks */,
-				9670A9241C647E8E00EEF360 /* Chartboost.framework in Frameworks */,
 				967976F51C522A8700C53618 /* AVFoundation.framework in Frameworks */,
 				967976EF1C522A7900C53618 /* CoreBluetooth.framework in Frameworks */,
 				967976E61C522A6000C53618 /* EventKit.framework in Frameworks */,
 				967976E71C522A6000C53618 /* EventKitUI.framework in Frameworks */,
-				966A05041C9BBB3600A11F57 /* RevMobAds.framework in Frameworks */,
 				1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */,
 				967976E31C522A5800C53618 /* Foundation.framework in Frameworks */,
 				1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */,
@@ -199,17 +185,12 @@
 				966A051A1C9BBBA600A11F57 /* WebKit.framework */,
 				966A05161C9BBB9D00A11F57 /* CoreAudio.framework */,
 				966A05171C9BBB9D00A11F57 /* CoreFoundation.framework */,
-				966A04FF1C9BBB3600A11F57 /* applovin */,
-				966A05001C9BBB3600A11F57 /* libAppLovinSdk.a */,
-				966A05011C9BBB3600A11F57 /* RevMobAds.framework */,
 				1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */,
-				1B5C03301C6CD2C500416BA8 /* Chartboost.framework */,
 				1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */,
 				9670A92C1C64926600EEF360 /* WebKit.framework */,
 				9670A92A1C64924100EEF360 /* Security.framework */,
 				9670A9261C64923400EEF360 /* libsqlite3.0.tbd */,
 				9670A9271C64923400EEF360 /* libsqlite3.tbd */,
-				9670A9221C647E8E00EEF360 /* Chartboost.framework */,
 				9670A9231C647E8E00EEF360 /* GoogleMobileAds.framework */,
 				967976F61C522A8F00C53618 /* CoreMedia.framework */,
 				967976F01C522A8700C53618 /* AdSupport.framework */,
@@ -392,7 +373,6 @@
 			files = (
 				966A05141C9BBB7600A11F57 /* StoryboardAD.storyboard in Resources */,
 				91060A1019ACE35A001FDC9D /* Main.storyboard in Resources */,
-				966A05021C9BBB3600A11F57 /* applovin in Resources */,
 				91060A1219ACE35A001FDC9D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
