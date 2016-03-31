@@ -15,12 +15,12 @@ class AdManagerView: UIViewController
 {
     
     
-    var isAd1 = true//admob full
-    var isAd2 = false//charbootst
-    var isAd3 = false//auto chartboost
-    var isAd4 = true//admob banner
-    var isAd5 = false//adcolony
-    var isAd6 = true//amazon
+    var isAd1 = false//admob full
+    var isAd2 = true//admob Banner
+    var isAd3 = false//amazon
+    var isAd4 = false//adcolony
+    var isAd5 = false//startapp
+    var isAd6 = true//none
     
     @IBOutlet weak var sw1: UISwitch!
     
@@ -65,14 +65,14 @@ class AdManagerView: UIViewController
     }
     
     @IBAction func sw5Action(sender: UISwitch) {
-        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad4")
+        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad5")
         NSUserDefaults.standardUserDefaults().synchronize()
         isAd5 = sender.on
     }
 
     
     @IBAction func sw6Action(sender: UISwitch) {
-        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad4")
+        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad6")
         NSUserDefaults.standardUserDefaults().synchronize()
         isAd6 = sender.on
     }

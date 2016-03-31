@@ -3,7 +3,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
     let data = Data()
@@ -12,10 +12,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         // Override point for customization after application launch.
         
         
-         Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
+         //Chartboost.startWithAppId(data.cAppID, appSignature: data.cSign, delegate: self)
         
-        AmazonAdRegistration.sharedRegistration().setAppKey("0bed35be5ed04f2f821fd2cdd5b35627")
+        AmazonAdRegistration.sharedRegistration().setAppKey(data.AmazonKey)
         AmazonAdRegistration.sharedRegistration().setLogging(true)
+        
+         AdColony.configureWithAppID(data.AdcolonyAppID, zoneIDs: [data.AdcolonyZoneID], delegate: nil, logging: true)
         
         return true
     }

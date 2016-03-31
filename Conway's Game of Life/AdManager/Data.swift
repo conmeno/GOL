@@ -26,6 +26,12 @@ class Data {
         let cSign : String = "603ebca4668b11528027d0edb74150f43f12d69f"
     
     
+    let AmazonKey: String = "0bed35be5ed04f2f821fd2cdd5b35627"
+    
+    //adcolony
+    let AdcolonyAppID: String = "app67e502f857eb464fa0"
+    let AdcolonyZoneID: String = "vz462b0a9cfbdf481f86"
+    
 //    App name: Game Of Life 1970
 //    
 //    Ad unit name: Game of life banner

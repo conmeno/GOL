@@ -19,7 +19,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var timerAd10:NSTimer?
     var timerAd60:NSTimer?
     var timerAmazon:NSTimer?
-    
+    var interstitialAmazon: AmazonAdInterstitial!
     var isAd1 = true//admob full
     var isAd2 = false//charbootst
     var isAd3 = false//auto chartboost
@@ -58,25 +58,32 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
            
             
             
-            if(isAd1 || isAd2)
-            {
-                self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAD10:", userInfo: nil, repeats: true)
-            }
-            
-            if(isAd2)
-            {
-                showChartBoost()
-            }
-            if(isAd3)
-            {
-                self.timerAd60 = NSTimer.scheduledTimerWithTimeInterval(90, target: self, selector: "timerAD60:", userInfo: nil, repeats: true)
-            }
+//            if(isAd1 || isAd2)
+//            {
+//                self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAD10:", userInfo: nil, repeats: true)
+//            }
+//            
+//            if(isAd2)
+//            {
+//                showChartBoost()
+//            }
+//            if(isAd3)
+//            {
+//                self.timerAd60 = NSTimer.scheduledTimerWithTimeInterval(90, target: self, selector: "timerAD60:", userInfo: nil, repeats: true)
+//            }
             
             if(isAd6)
             {
-            showAmazonBanner()
-                self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+                interstitialAmazon = AmazonAdInterstitial()
+                interstitialAmazon.delegate = self
+                
+                loadAmazonFull()
+                showAmazonFull()
             }
+            
+            showAmazonBanner()
+            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+
         }
         
     }
@@ -169,32 +176,32 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
         //ad2 charboost
         
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad2") != nil)
-        {
-            isAd2 = NSUserDefaults.standardUserDefaults().objectForKey("ad2") as! Bool
-            
-        }
+//        if(NSUserDefaults.standardUserDefaults().objectForKey("ad2") != nil)
+//        {
+//            isAd2 = NSUserDefaults.standardUserDefaults().objectForKey("ad2") as! Bool
+//            
+//        }
         
         
         //ad3 ...
         
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad3") != nil)
-        {
-            isAd3 = NSUserDefaults.standardUserDefaults().objectForKey("ad3") as! Bool
-            
-        }
+//        if(NSUserDefaults.standardUserDefaults().objectForKey("ad3") != nil)
+//        {
+//            isAd3 = NSUserDefaults.standardUserDefaults().objectForKey("ad3") as! Bool
+//            
+//        }
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("ad4") != nil)
         {
             isAd4 = NSUserDefaults.standardUserDefaults().objectForKey("ad4") as! Bool
             
         }
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("ad5") != nil)
-        {
-            isAd5 = NSUserDefaults.standardUserDefaults().objectForKey("ad5") as! Bool
-            
-        }
+//        
+//        if(NSUserDefaults.standardUserDefaults().objectForKey("ad5") != nil)
+//        {
+//            isAd5 = NSUserDefaults.standardUserDefaults().objectForKey("ad5") as! Bool
+//            
+//        }
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("ad6") != nil)
         {
@@ -207,49 +214,36 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     }
     
     
+//    
+//    func timerAD10(timer:NSTimer) {
+//        
+//        if(showAd())
+//        {
+//            if(isAd1 && isFirsAdmob == false)
+//            {
+//                if(self.interstitial.isReady)
+//                {
+//                    showAdmob()
+//                    isFirsAdmob = true
+//                }
+//            }
+//            if(isAd2 && isFirstChart == false)
+//            {
+//                Chartboost.showInterstitial("First stage")
+//              
+//                isFirstChart = true
+//            }
+//        }
+//        
+//        if(isFirsAdmob && isFirstChart)
+//        {
+//            timerAd10?.invalidate()
+//        }
+//        
+//        
+//    }
+//
     
-    func timerAD10(timer:NSTimer) {
-        
-        if(showAd())
-        {
-            if(isAd1 && isFirsAdmob == false)
-            {
-                if(self.interstitial.isReady)
-                {
-                    showAdmob()
-                    isFirsAdmob = true
-                }
-            }
-            if(isAd2 && isFirstChart == false)
-            {
-                Chartboost.showInterstitial("First stage")
-              
-                isFirstChart = true
-            }
-        }
-        
-        if(isFirsAdmob && isFirstChart)
-        {
-            timerAd10?.invalidate()
-        }
-        
-        
-    }
-    func timerAD60(timer:NSTimer) {
-        
-        if(showAd())
-        {
-            if(isAd2)
-            {
-               showChartBoost()
-            }
-            
-        }
-        
-        
-        
-    }
-
     
     func timerVPNMethodAutoAd(timer:NSTimer) {
         print("VPN Checking....")
@@ -275,13 +269,13 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     
     
-    func showChartBoost()
-    {
-        Chartboost.closeImpression()
-        Chartboost.showInterstitial("Home" + String(AdNumber))
-        AdNumber++
-        print(AdNumber)
-    }
+//    func showChartBoost()
+//    {
+//        Chartboost.closeImpression()
+//        Chartboost.showInterstitial("Home" + String(AdNumber))
+//        AdNumber++
+//        print(AdNumber)
+//    }
     
     
     
@@ -387,6 +381,64 @@ showAmazonBanner()
     }
 
 ////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
+    
+    //////////////////////
+    //amazonfull
+    //////////////////////
+    func loadAmazonFull()
+    {
+        let options = AmazonAdOptions()
+        
+        options.isTestRequest = false
+        
+        interstitialAmazon.load(options)
+    }
+    func showAmazonFull()
+    {
+        interstitialAmazon.presentFromViewController(self.viewController)
+        
+    }
+    
+    /////////////////////////////////////////////////////////////
+    // Mark: - AmazonAdViewDelegate
+ 
+    ///////////
+    //full delegate
+    // Mark: - AmazonAdInterstitialDelegate
+    func interstitialDidLoad(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial loaded.", terminator: "")
+        //loadStatusLabel.text = "Interstitial loaded."
+        showAmazonFull()
+    }
+    
+    func interstitialDidFailToLoad(interstitial: AmazonAdInterstitial!, withError: AmazonAdError!) {
+        Swift.print("Interstitial failed to load.", terminator: "")
+        //loadStatusLabel.text = "Interstitial failed to load."
+    }
+    
+    func interstitialWillPresent(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial will be presented.", terminator: "")
+    }
+    
+    func interstitialDidPresent(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial has been presented.", terminator: "")
+    }
+    
+    func interstitialWillDismiss(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial will be dismissed.", terminator: "")
+        
+    }
+    
+    func interstitialDidDismiss(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial has been dismissed.", terminator: "");
+        //self.loadStatusLabel.text = "No interstitial loaded.";
+        //loadAmazonFull();
+    }
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
     
 }
