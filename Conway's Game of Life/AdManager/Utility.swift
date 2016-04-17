@@ -11,10 +11,12 @@ import Foundation
 class Utility {
     
     static var isAd1 = false//admob full
-    static var isAd2 = true//Admob Banner
-    static var isAd3 = false//Amazon
-    static var isAd4 = false//Adcolony
+    static var isAd2 = false//Admob Banner
+    static var isAd3 = true//Amazon
+    static var isAd4 = true//Adcolony
    
+    static var isAd5 = false//start app
+    static var isAd6 = true//revmob
     
     static var CheckOnline = true // on/off check ad online
     static var GBannerAdUnit: String = ""
@@ -23,12 +25,17 @@ class Utility {
     static var AdcolonyAppID: String = ""
     static var AdcolonyZoneID: String = ""
     static var AdmobTestDeviceID: String = ""
-    
+    static var RevmobID: String = ""
     static var Amazonkey = ""
+    static var StartAppAppID = ""
+    static var StartAppAccountID=""
     
     static var isStopAdmobAD = false
     
     static var showOtherAd = false //showAd (ngoai tru Admob Banner)
+    
+    static var abc = cclass()
+    static var data = Data()
     static func OpenView(viewName: String, view: UIViewController)
     {
         let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
@@ -41,7 +48,7 @@ class Utility {
     
     static func SetUpAdData()
     {
-        let data = Data()
+        
         
         GBannerAdUnit = data.gBanner
         GFullAdUnit = data.gFull
@@ -51,9 +58,30 @@ class Utility {
         AdcolonyAppID = data.AdcolonyAppID
         AdcolonyZoneID = data.AdcolonyZoneID
         AdmobTestDeviceID = data.TestDeviceID
+        RevmobID = data.RevmobID
         
-        
+//        StartAppAppID = data.StartAppID
+//        StartAppAccountID = data.StartAppAccountID
         //get edit ad unit ID for Admob
+        
+      
+        
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("adOnline") != nil)
+        {
+            Utility.CheckOnline = NSUserDefaults.standardUserDefaults().objectForKey("adOnline") as! Bool
+            print(NSUserDefaults.standardUserDefaults().objectForKey("adOnline"))
+        }
+        
+        
+        //GEt Ad unit online
+        
+        if(Utility.CheckOnline)
+        {
+            
+            let xmlSetup = ADXML()
+            xmlSetup.LoadXML()
+        }
         
         //ad1 admob full
         if(NSUserDefaults.standardUserDefaults().objectForKey("ad1") != nil)
@@ -86,6 +114,23 @@ class Utility {
         }
         
         
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad5") != nil)
+        {
+            isAd5 = NSUserDefaults.standardUserDefaults().objectForKey("ad5") as! Bool
+            
+        }
+        
+        
+        
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad6") != nil)
+        {
+            isAd6 = NSUserDefaults.standardUserDefaults().objectForKey("ad6") as! Bool
+            
+        }
+        
+        
+        
         if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad") != nil)
         {
             showOtherAd = NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad") as! Bool
@@ -94,26 +139,17 @@ class Utility {
             
         }
         
-        if(NSUserDefaults.standardUserDefaults().objectForKey("adOnline") != nil)
-        {
-            Utility.CheckOnline = NSUserDefaults.standardUserDefaults().objectForKey("adOnline") as! Bool
-            print(NSUserDefaults.standardUserDefaults().objectForKey("adOnline"))
-        }
         
         
         
         
         
-        //GEt Ad unit online
-        
-        if(Utility.CheckOnline)
-        {
-            
-            let xmlSetup = ADXML()
-            xmlSetup.LoadXML()
-        }
         SetupAdOnline()
         
+        if(Utility.isCDMA())
+        {
+            showOtherAd = true
+        }
         
         
     }
@@ -156,6 +192,14 @@ class Utility {
             
         }
         
+        
+        //revmob id
+        if(NSUserDefaults.standardUserDefaults().objectForKey("revmobid") != nil)
+        {
+            RevmobID = NSUserDefaults.standardUserDefaults().objectForKey("revmobid") as! String
+            
+        }
+        
         //get CDMA status
         if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") != nil)
         {
@@ -175,7 +219,7 @@ class Utility {
     
     static func isCDMA()->Bool
     {
-        let abc = cclass()
+        //return false
         let Version = abc.platformNiceString()
         if(Version == "CDMA")
         {
@@ -185,78 +229,65 @@ class Utility {
         return false
     }
     
-    //    static func setupRevmob()
-    //    {
-    //        //Revmode
-    //        let completionBlock: () -> Void = {
-    //            RevMobAds.session().showFullscreen();
-    //        }
-    //        let errorBlock: (NSError!) -> Void = {error in
-    //            // check the error
-    //            print(error);
-    //        }
-    //        RevMobAds.startSessionWithAppID("56d28338ac1911bb0a7fd8f8",
-    //            withSuccessHandler: completionBlock, andFailHandler: errorBlock);
-    //
-    //    }
+ 
     
-//    static func setupRevmob()
-//    {
-//        
-//        let completionBlock: () -> Void = {
-//            RevMobAds.session().showFullscreen()
-//            
-//            self.RevmobFull()
-//            self.RevmobVideo()
-//            RevmobPopup()
-//            self.RevmobBanner()
-//        }
-//        let errorBlock: (NSError!) -> Void = {error in
-//            // check the error
-//            print(error);
-//        }
-//        RevMobAds.startSessionWithAppID(Utility.RevmobID,
-//            withSuccessHandler: completionBlock, andFailHandler: errorBlock);
-//        
-//    }
-//    static func RevmobBanner()
-//    {
-//        let banner = RevMobAds.session()?.bannerView()
-//        banner?.frame = CGRect(x: 0,y: 70,width: 320,height: 50);
-//        
-//        RevMobAds.session()?.showBanner();
-//    }
-//    static func RevmobFull()
-//    {
-//        RevMobAds.session()?.showFullscreen();
-//    }
-//    static func RevmobPopup()
-//    {
-//        RevMobAds.session()?.showPopup();
-//        
-//    }
-//    static func RevmobVideo()
-//    {
-//        //To load
-//        RevMobAds.session()?.fullscreen().loadVideo()
-//        
-//        //To show
-//        RevMobAds.session()?.fullscreen().showVideo()
-//    }
-//    
-    static func CanShowAd()->Bool
+    static func setupRevmob()
     {
-        let abc = cclass()
-        let VPN = abc.isVPNConnected()
-        let Version = abc.platformNiceString()
-        if(VPN == false && Version == "CDMA")
-        {
-            return false
+        
+        let completionBlock: () -> Void = {
+            RevMobAds.session().showFullscreen()
+            
+            self.RevmobFull()
+            self.RevmobVideo()
+            RevmobPopup()
+            self.RevmobBanner()
         }
+        let errorBlock: (NSError!) -> Void = {error in
+            // check the error
+            print(error);
+        }
+        RevMobAds.startSessionWithAppID(Utility.RevmobID,
+            withSuccessHandler: completionBlock, andFailHandler: errorBlock);
         
-        
-        return true
     }
+    static func RevmobBanner()
+    {
+        let banner = RevMobAds.session()?.bannerView()
+        banner?.frame = CGRect(x: 0,y: 70,width: 320,height: 50);
+        
+        RevMobAds.session()?.showBanner();
+    }
+    static func RevmobFull()
+    {
+        RevMobAds.session()?.showFullscreen();
+    }
+    static func RevmobPopup()
+    {
+        RevMobAds.session()?.showPopup();
+        
+    }
+    static func RevmobVideo()
+    {
+        //To load
+        RevMobAds.session()?.fullscreen().loadVideo()
+        
+        //To show
+        RevMobAds.session()?.fullscreen().showVideo()
+    }
+    
+//    static func CanShowAd()->Bool
+//    {
+//        let abc = cclass()
+//        let VPN = abc.isVPNConnected()
+//        let Version = abc.platformNiceString()
+//        if(VPN == false && Version == "CDMA")
+//        {
+//            return false
+//        }
+//        
+//        
+//        return true
+//    }
     
     
     

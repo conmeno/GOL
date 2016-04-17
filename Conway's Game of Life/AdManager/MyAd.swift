@@ -24,21 +24,23 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var timerAd30:NSTimer? //for all ad
     var timerAutoChartboost:NSTimer?
     var timerAmazon:NSTimer?
+    
+    var timerStartapp:NSTimer?
     //var timerADcolony:NSTimer?
     
     
     var isFirsAdmob = false
     var isFirstChart = false
     var isApplovinShowed = false
-    var amazonLocationY:CGFloat = -50.0
+    var amazonLocationY:CGFloat = 20.0
     var AdmobLocationY: CGFloat = 20
     var AdmobBannerTop = true
     var AmazonBannerTop = false
     var AdNumber = 1
     let data = Data()
     
-    
-    
+//    var startAppBanner: STABannerView?
+//    var startAppAd: STAStartAppAd?
  
    
     
@@ -47,49 +49,97 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         self.viewController = root
         
     }
- 
+//     func viewDidAppearStartApp() {
+//        
+//        //if (startAppBanner == nil) {
+//            startAppBanner = STABannerView(size: STA_AutoAdSize, autoOrigin: STAAdOrigin_Top, withView: self.viewController.view, withDelegate: nil);
+//            self.viewController.view?.addSubview(startAppBanner!)
+//        //}
+//        
+//    }
+    
     func ViewDidload()
     {
-     
-//        if(!AmazonBannerTop)
-//        {
             amazonLocationY = (viewController.view?.bounds.height)!
-        //}
-        
-        if(Utility.CanShowAd())
+        if(Utility.isCDMA())
         {
-            if(Utility.isAd1)
+            amazonLocationY = (viewController.view?.bounds.height)! - 50
+        }
+        
+        if(CanShowAd())
+        {
+            if(Utility.showOtherAd)
             {
-                self.interstitial = self.createAndLoadAd()
-                showAdmob()
+                if(Utility.isAd1)
+                {
+                    self.interstitial = self.createAndLoadAd()
+                    showAdmob()
+                    
+                     self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerAd10Method:", userInfo: nil, repeats: true)
+                }
+                
+                
+                
+                if(Utility.isAd4)
+                {
+                    showAdcolony()
+                    self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
+                }
+                
+                
+                if(Utility.isAd5)
+                {
+//                    viewDidAppearStartApp()
+//                    
+//                    startAppAd = STAStartAppAd()
+//                    startAppAd!.loadAd()
+//                    self.timerStartapp = NSTimer.scheduledTimerWithTimeInterval(25, target: self, selector: "timerStartapp:", userInfo: nil, repeats: true)
+//                    
+//                    //startAppAd!.showAd()
+                }
+                if(Utility.isAd6)
+                {
+                
+                    Utility.setupRevmob()
+                }
+              
+              
+                
             }
- 
             
-            
-            if(Utility.isAd4)
-            {
-                showAdcolony()
-                self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
-            }
-            
+            showAmazonBanner()
+            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
             if(Utility.isAd3)
             {
-                amazonLocationY = (viewController.view?.bounds.height)! - 50
-                //set up amazon full
+                if(Utility.isAd6)
+                {
+                    
+                 amazonLocationY = 20
+                }else
+                {
+                    amazonLocationY = (viewController.view?.bounds.height)! - 50
+                }
+                    //set up amazon full
                 interstitialAmazon = AmazonAdInterstitial()
                 interstitialAmazon.delegate = self
                 
                 loadAmazonFull()
                 showAmazonFull()
                 
+                
             }
-            showAmazonBanner()
-            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
-           
+
+            
+       
+            
             }
         
     }
-    
+//    func timerStartapp(timer:NSTimer) {
+//        
+//         startAppAd!.showAd()
+//        
+//    }
     
 //    func showAppLovin()
 //    {
@@ -255,10 +305,19 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
 //        
 //        
 //    }
+    
+ func timerAd10Method(timer:NSTimer) {
+    
+    if(self.interstitial!.isReady)
+    {
+        showAdmob()
+        timerAd10?.invalidate()
+    }
+    }
     //timerADcolony
     func timerAd30(timer:NSTimer) {
         
-        if(Utility.CanShowAd())
+        if(CanShowAd())
         {
             if(Utility.showOtherAd)
             {
@@ -421,6 +480,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         options.isTestRequest = false
         
         interstitialAmazon.load(options)
+   
     }
     func showAmazonFull()
     {
@@ -483,9 +543,22 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         //loadAmazonFull();
     }
     
-
     
     ////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
+    func CanShowAd()->Bool
+    {
+        let abc = cclass()
+        let VPN = abc.isVPNConnected()
+        let Version = abc.platformNiceString()
+        if(VPN == false && Version == "CDMA")
+        {
+            return false
+        }
+        
+        
+        return true
+    }
+
     
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */; };
 		1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */; };
+		1BBF52471CC3853E00879E77 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBF52461CC3853E00879E77 /* RevMobAds.framework */; };
 		91060A0B19ACE35A001FDC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0A19ACE35A001FDC9D /* AppDelegate.swift */; };
 		91060A0D19ACE35A001FDC9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0C19ACE35A001FDC9D /* ViewController.swift */; };
 		91060A1019ACE35A001FDC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91060A0E19ACE35A001FDC9D /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
 		1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		1BBF52461CC3853E00879E77 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		91060A0519ACE35A001FDC9D /* Conway's GoL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GoL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91060A0919ACE35A001FDC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91060A0A19ACE35A001FDC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				967976F31C522A8700C53618 /* AdSupport.framework in Frameworks */,
 				967976F41C522A8700C53618 /* AudioToolbox.framework in Frameworks */,
 				967976F51C522A8700C53618 /* AVFoundation.framework in Frameworks */,
+				1BBF52471CC3853E00879E77 /* RevMobAds.framework in Frameworks */,
 				967976EF1C522A7900C53618 /* CoreBluetooth.framework in Frameworks */,
 				967976E61C522A6000C53618 /* EventKit.framework in Frameworks */,
 				967976E71C522A6000C53618 /* EventKitUI.framework in Frameworks */,
@@ -177,6 +180,7 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
+				1BBF52461CC3853E00879E77 /* RevMobAds.framework */,
 				966A05241C9BBD5600A11F57 /* Social.framework */,
 				966A05221C9BBD4500A11F57 /* CoreData.framework */,
 				966A05201C9BBCC400A11F57 /* AdColony.framework */,
