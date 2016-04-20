@@ -37,7 +37,7 @@ class Data {
     //Vungle ID
     let VungleID: String = "1078567033"
     
-    let UnityGameId: String = ""
+    let UnityGameId: String = "1061074"
     
     
     

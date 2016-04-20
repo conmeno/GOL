@@ -83,12 +83,17 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 if(Utility.isAd4)
                 {
                     showAdcolony()
-                    self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
+                   
                 }
                 
                 
                 if(Utility.isAd5)
                 {
+                    //Unity
+                    ShowUnity()
+                    
+                    
+                    
 //                    viewDidAppearStartApp()
 //                    
 //                    startAppAd = STAStartAppAd()
@@ -100,7 +105,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 if(Utility.isAd6)
                 {
                 
-                    //Utility.setupRevmob()
+                    Utility.setupRevmob()
                 }
               
               if(Utility.isAd7)
@@ -108,7 +113,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 showVungle()
              }
                 
-                if(Utility.isAd4 || Utility.isAd7)
+                if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 )
                 {
                     self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
                 }
@@ -143,6 +148,20 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             
             }
         
+    }
+    func vungleSDKwillCloseAdWithViewInfo(viewInfo: [NSObject : AnyObject]!, willPresentProductSheet: Bool) {
+        print("cai con me no")
+    }
+    
+    func ShowUnity()
+    {
+        if UnityAds.sharedInstance().canShow() {
+            UnityAds.sharedInstance().show()
+        }
+        else {
+            NSLog("%@","Cannot show it yet!")
+        }
+
     }
 //    func timerStartapp(timer:NSTimer) {
 //        
@@ -259,65 +278,9 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
 //    }
     
     
+ 
     
-    
-//    func timerAD30(timer:NSTimer) {
-//        if(RevMobAds.session() == nil)
-//        {
-//            setupRevmob()
-//           
-//        }else
-//        {
-//            RevmobFull()
-//            RevmobBanner()
-//            RevmobVideo()
-//        }
-//        
-//    }
-//
-    
-//    func timerAD10(timer:NSTimer) {
-//        
-//        if(Utility.CanShowAd())
-//        {
-//            if(Utility.isAd1 && isFirsAdmob == false)
-//            {
-//                if(self.interstitial.isReady)
-//                {
-//                    showAdmob()
-//                    isFirsAdmob = true
-//                }
-//            }
-//            if(Utility.isAd2 && isFirstChart == false)
-//            {
-//                Chartboost.showInterstitial("First stage")
-//                
-//                isFirstChart = true
-//            }
-//        }
-//        
-//        if(isFirsAdmob && isFirstChart)
-//        {
-//            timerAd10?.invalidate()
-//        }
-//        
-//        
-//    }
-//    func timerAutoChartboost(timer:NSTimer) {
-//        
-//        if(Utility.CanShowAd())
-//        {
-//            if(Utility.isAd2)
-//            {
-//                showChartBoost()
-//            }
-//            
-//        }
-//        
-//        
-//        
-//    }
-    
+ 
  func timerAd10Method(timer:NSTimer) {
     
     if(self.interstitial!.isReady)
@@ -339,11 +302,14 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 }
                 if(Utility.isAd7)
                 {
-                    //showVungle()
+                    showVungle()
                     
                 }
-        
-            
+            if(Utility.isAd5)
+            {
+                ShowUnity()
+                
+            }
  
         }
         

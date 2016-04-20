@@ -17,9 +17,11 @@ class Utility {
    
     static var isAd5 = false// ==>UnityAds
     static var isAd6 = true//revmob
-    static var isAd8 = true //vungle
     
-     static var isAd7 = true //sonic
+    static var isAd7 = true //vungle
+    static var isAd8 = true //Sonic
+    
+    
     static var CheckOnline = true // on/off check ad online
     static var GBannerAdUnit: String = ""
     static var GFullAdUnit: String = ""
@@ -32,7 +34,7 @@ class Utility {
     static var StartAppAppID = ""
     static var StartAppAccountID=""
     static var VungleID = ""
-    
+    static var UnityGameID = ""
     static var isStopAdmobAD = false
     
     static var showOtherAd = false //showAd (ngoai tru Admob Banner)
@@ -63,6 +65,8 @@ class Utility {
         AdmobTestDeviceID = data.TestDeviceID
         RevmobID = data.RevmobID
         VungleID = data.VungleID
+        UnityGameID = data.UnityGameId
+        
 //        StartAppAppID = data.StartAppID
 //        StartAppAccountID = data.StartAppAccountID
         //get edit ad unit ID for Admob
@@ -137,7 +141,11 @@ class Utility {
             isAd7 = NSUserDefaults.standardUserDefaults().objectForKey("ad7") as! Bool
             
         }
-        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad8") != nil)
+        {
+            isAd8 = NSUserDefaults.standardUserDefaults().objectForKey("ad8") as! Bool
+            
+        }
 
         
         
