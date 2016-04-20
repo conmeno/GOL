@@ -103,7 +103,16 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                     Utility.setupRevmob()
                 }
               
-              
+              if(Utility.isAd7)
+              {
+                showVungle()
+             }
+                
+                if(Utility.isAd4 & Utility.isAd7)
+                {
+                    self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
+                }
+
                 
             }
             
@@ -163,10 +172,6 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
 //        
         let sdk = VungleSDK.sharedSDK()
         sdk.delegate = self
-        
-        
-        
-        
         do {
             try sdk.playAd(viewController, error: ())
         } catch
@@ -326,19 +331,18 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
         if(CanShowAd())
         {
-            if(Utility.showOtherAd)
-            {
+            
                 if(Utility.isAd4)
                 {
                     showAdcolony()
                     
                 }
-//                if(Utility.isAd9)
-//                {
-//                    showAppLovin()
-//                    
-//                }
-            }
+                if(Utility.isAd7)
+                {
+                    showVungle()
+                    
+                }
+        
             
  
         }
