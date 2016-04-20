@@ -3,7 +3,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UnityAdsDelegate  {
                             
     var window: UIWindow?
     let data = Data()
@@ -30,13 +30,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(Utility.isAd7)
         {
            
-            let sdk = VungleSDK.sharedSDK()
-            // start vungle publisher library
-            sdk.startWithAppId(Utility.VungleID)
+//            let sdk = VungleSDK.sharedSDK()
+//            // start vungle publisher library
+//            sdk.startWithAppId(Utility.VungleID)
+//            sdk.setLoggingEnabled(true)
+//            sdk.clearCache()
+//            sdk.clearSleep()
         }
 
+        //UNITY ADS
+        UnityAds.sharedInstance().delegate = self
+        UnityAds.sharedInstance().setTestMode(true)
+        UnityAds.sharedInstance().startWithGameId("1061074", andViewController: self.window?.rootViewController)
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+        
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            if UnityAds.sharedInstance().canShow() {
+                UnityAds.sharedInstance().show()
+            }
+            else {
+                NSLog("%@","Cannot show it yet!")
+            }
+        }
+        
+        
         
         return true
+    }
+    
+    func unityAdsVideoCompleted(rewardItemKey : String, skipped : Bool) {
+        NSLog("Video completed: %@: %@", skipped, rewardItemKey)
     }
     
     func applicationWillResignActive(application: UIApplication) {

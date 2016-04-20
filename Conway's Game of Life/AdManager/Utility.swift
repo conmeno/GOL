@@ -15,9 +15,11 @@ class Utility {
     static var isAd3 = true//Amazon
     static var isAd4 = true//Adcolony
    
-    static var isAd5 = false//start app
+    static var isAd5 = false// ==>UnityAds
     static var isAd6 = true//revmob
-    static var isAd7 = true //vungle
+    static var isAd8 = true //vungle
+    
+     static var isAd7 = true //sonic
     static var CheckOnline = true // on/off check ad online
     static var GBannerAdUnit: String = ""
     static var GFullAdUnit: String = ""

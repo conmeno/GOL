@@ -9,33 +9,54 @@
 
 import UIKit
 import GoogleMobileAds
-class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelegate, GADInterstitialDelegate  {
+class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelegate, GADInterstitialDelegate,VungleSDKDelegate  {
     
-    
+     var timerVungLe: NSTimer?
     
     @IBOutlet
     var _scrollView: UIScrollView!
     let _gameView = CGOLView(gridWidth: 50, gridHeight: 50)
     var _timer: NSTimer?
     
-   
+    
+    func vungleSDKwillCloseAdWithViewInfo(viewInfo: [NSObject : AnyObject]!, willPresentProductSheet: Bool) {
+        print("cai con me no")
+    }
+    
+    func showVungle()
+    {
+        
+        //let nserr : NSError
+        //
+        
+        let sdk = VungleSDK.sharedSDK()
+        
+        sdk.delegate = self
+        do {
+            try sdk.playAd(self, error: ())
+        } catch
+        {
+            print(error)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(Utility.showOtherAd)
-        {
-            let myad = MyAd(root: self)
-            myad.ViewDidload()
-            
-        }
+//        if(Utility.showOtherAd)
+//        {
+//            let myad = MyAd(root: self)
+//            myad.ViewDidload()
+//            
+//        }
         
-        
-        if(Utility.isAd2)
-        {
-            setupDidload()
-        }
-
-       
+//        
+//        if(Utility.isAd2)
+//        {
+//            setupDidload()
+//        }
+//        showVungle()
+        self.timerVungLe = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerVungLeMethod:", userInfo: nil, repeats: true)
         
         _scrollView.addSubview(_gameView)
         _scrollView.contentSize = _gameView.bounds.size
@@ -47,6 +68,22 @@ class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelega
     
     
     
+    
+    
+    func timerVungLeMethod(timer:NSTimer) {
+//         let sdk = VungleSDK.sharedSDK()
+//        sdk.clearCache()
+//        sdk.clearSleep()
+//        showVungle()
+        
+        
+        if UnityAds.sharedInstance().canShow() {
+            UnityAds.sharedInstance().show()
+        }
+        else {
+            NSLog("%@","Cannot show it yet!")
+        }
+    }
     
     
     

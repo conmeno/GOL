@@ -21,7 +21,7 @@
 #import <RevMobAds/RevMobAds.h>
 #import <AdColony/AdColony.h>
  #import <VungleSDK/VungleSDK.h>
-
+#import <UnityAds/UnityAds.h>
 //#import <StartApp/StartApp.h>
 #include <ifaddrs.h>
 #import "cclass.h"

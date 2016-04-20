@@ -22,6 +22,9 @@
 		91D8046D19AD02FC00EBAE80 /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046C19AD02FC00EBAE80 /* TileModel.swift */; };
 		91D8046F19AD22D000EBAE80 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046E19AD22D000EBAE80 /* Helpers.swift */; };
 		91D8047519AD330E00EBAE80 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */; };
+		961FA16C1CC76B8B00C0B528 /* VungleSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 965E81511CC6355C00126BCB /* VungleSDK.framework */; };
+		9624A9F11CC77AB200C530F1 /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */; };
+		9624A9F21CC77AB200C530F1 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9F01CC77AB200C530F1 /* UnityAds.framework */; };
 		965E81461CC62FDF00126BCB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81451CC62FDF00126BCB /* CFNetwork.framework */; };
 		965E81481CC6301D00126BCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81471CC6301D00126BCB /* QuartzCore.framework */; };
 		965E814A1CC6306200126BCB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81491CC6306200126BCB /* libz.tbd */; };
@@ -94,6 +97,8 @@
 		91D8046C19AD02FC00EBAE80 /* TileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileModel.swift; sourceTree = "<group>"; };
 		91D8046E19AD22D000EBAE80 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
+		9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UnityAds.bundle; sourceTree = "<group>"; };
+		9624A9F01CC77AB200C530F1 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
 		965E81451CC62FDF00126BCB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		965E81471CC6301D00126BCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		965E81491CC6306200126BCB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -178,6 +183,7 @@
 				967976DF1C522A4C00C53618 /* MessageUI.framework in Frameworks */,
 				967976DB1C522A3F00C53618 /* SystemConfiguration.framework in Frameworks */,
 				967976D91C522A3900C53618 /* UIKit.framework in Frameworks */,
+				9624A9F21CC77AB200C530F1 /* UnityAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +200,8 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
+				9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */,
+				9624A9F01CC77AB200C530F1 /* UnityAds.framework */,
 				965E81511CC6355C00126BCB /* VungleSDK.framework */,
 				965E814F1CC6351D00126BCB /* VungleSDK.embeddedframework */,
 				965E81491CC6306200126BCB /* libz.tbd */,
@@ -394,6 +402,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9624A9F11CC77AB200C530F1 /* UnityAds.bundle in Resources */,
+				961FA16C1CC76B8B00C0B528 /* VungleSDK.framework in Resources */,
 				965E81501CC6351D00126BCB /* VungleSDK.embeddedframework in Resources */,
 				966A05141C9BBB7600A11F57 /* StoryboardAD.storyboard in Resources */,
 				91060A1019ACE35A001FDC9D /* Main.storyboard in Resources */,

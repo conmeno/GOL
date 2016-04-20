@@ -100,7 +100,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 if(Utility.isAd6)
                 {
                 
-                    Utility.setupRevmob()
+                    //Utility.setupRevmob()
                 }
               
               if(Utility.isAd7)
@@ -108,7 +108,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 showVungle()
              }
                 
-                if(Utility.isAd4 & Utility.isAd7)
+                if(Utility.isAd4 || Utility.isAd7)
                 {
                     self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
                 }
@@ -339,7 +339,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 }
                 if(Utility.isAd7)
                 {
-                    showVungle()
+                    //showVungle()
                     
                 }
         

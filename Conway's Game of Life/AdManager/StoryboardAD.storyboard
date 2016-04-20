@@ -113,7 +113,7 @@
                                     <action selector="sw4Action:" destination="mQ7-qi-MMn" eventType="valueChanged" id="OAS-If-aTc"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Startapp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-43-91F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UnityAds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-43-91F">
                                 <rect key="frame" x="66" y="65" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -203,6 +203,24 @@
                                     <rect key="frame" x="83" y="235" width="97" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-HR-bvt">
+                                <rect key="frame" x="66" y="65" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="223" y="235" width="97" height="21"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="acs-5o-KQd">
+                                <rect key="frame" x="26" y="94" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="159" y="230" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sw8Action:" destination="mQ7-qi-MMn" eventType="valueChanged" id="76G-V8-na5"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -229,6 +247,8 @@
                                 <exclude reference="GQf-E4-aVG"/>
                                 <exclude reference="Z9P-m0-bya"/>
                                 <exclude reference="0mD-oP-LKb"/>
+                                <exclude reference="LAb-HR-bvt"/>
+                                <exclude reference="acs-5o-KQd"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0se-Mu-mSP"/>
@@ -255,6 +275,8 @@
                                 <include reference="GQf-E4-aVG"/>
                                 <include reference="Z9P-m0-bya"/>
                                 <include reference="0mD-oP-LKb"/>
+                                <include reference="LAb-HR-bvt"/>
+                                <include reference="acs-5o-KQd"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0se-Mu-mSP"/>
@@ -274,6 +296,7 @@
                         <outlet property="sw5" destination="FVn-3W-dcs" id="T3y-fK-y46"/>
                         <outlet property="sw6" destination="GQf-E4-aVG" id="9is-Pn-6ou"/>
                         <outlet property="sw7" destination="Z9P-m0-bya" id="EFk-cX-Du0"/>
+                        <outlet property="sw8" destination="acs-5o-KQd" id="Nnk-np-Rkj"/>
                         <outlet property="textDevice" destination="spA-Qb-dIS" id="vz2-5B-6lI"/>
                     </connections>
                 </viewController>
