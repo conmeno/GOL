@@ -9,8 +9,8 @@
 import Foundation
 import GoogleMobileAds
 
-class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate {
-    //VungleSDKDelegate
+class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate,VungleSDKDelegate {
+    
     
     let viewController:UIViewController
     //var isStopAD = true
@@ -156,18 +156,25 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
 //        }
 //        
 //    }
-//    func showVungle()
-//    {
+    func showVungle()
+    {
+        
+        //let nserr : NSError
 //        
-//        //let nserr : NSError
-////        
-////        let sdk = VungleSDK.sharedSDK()
-////        sdk.delegate = self
-////        sdk.playAd(viewController)
-//        
-//        
-//       }
-// 
+        let sdk = VungleSDK.sharedSDK()
+        sdk.delegate = self
+        
+        
+        
+        
+        do {
+            try sdk.playAd(viewController, error: ())
+        } catch
+        {
+            print("Invalid Selection.")
+        }
+       }
+//
 //    
       func showAdcolony()
     {

@@ -27,6 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             AdColony.configureWithAppID(Utility.AdcolonyAppID, zoneIDs: [Utility.AdcolonyZoneID], delegate: nil, logging: true)
         }
+        if(Utility.isAd7)
+        {
+           
+            let sdk = VungleSDK.sharedSDK()
+            // start vungle publisher library
+            sdk.startWithAppId(Utility.VungleID)
+        }
 
         
         return true

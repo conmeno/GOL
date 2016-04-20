@@ -72,7 +72,8 @@ class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelega
             )
         }
     }
-    
+   
+
     private dynamic func _update() {
         _step()
     }

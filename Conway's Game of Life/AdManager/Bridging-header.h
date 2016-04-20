@@ -20,7 +20,7 @@
 #import <AmazonAd/AmazonAdOptions.h>
 #import <RevMobAds/RevMobAds.h>
 #import <AdColony/AdColony.h>
-// #import <VungleSDK/VungleSDK.h>
+ #import <VungleSDK/VungleSDK.h>
 
 //#import <StartApp/StartApp.h>
 #include <ifaddrs.h>

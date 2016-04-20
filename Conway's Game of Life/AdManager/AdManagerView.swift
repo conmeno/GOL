@@ -33,6 +33,7 @@ class AdManagerView: UIViewController
     @IBOutlet weak var sw4: UISwitch!
      @IBOutlet weak var sw5: UISwitch!
      @IBOutlet weak var sw6: UISwitch!
+     @IBOutlet weak var sw7: UISwitch!
     
   @IBOutlet weak var ShowOtherAd: UISwitch!
     
@@ -80,7 +81,13 @@ class AdManagerView: UIViewController
         Utility.isAd6 = sender.on
     }
     
-       
+    
+    @IBAction func sw7Action(sender: UISwitch) {
+        NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"ad7")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        Utility.isAd7 = sender.on
+    }
+    
     @IBAction func ShowOtherAd(sender: UISwitch) {
         NSUserDefaults.standardUserDefaults().setObject(sender.on, forKey:"show-other-ad")
         NSUserDefaults.standardUserDefaults().synchronize()
@@ -204,7 +211,8 @@ class AdManagerView: UIViewController
         
         sw5.on = Utility.isAd5
         sw6.on = Utility.isAd6
-        
+        sw7.on = Utility.isAd7
+
          ShowOtherAd.on = Utility.showOtherAd
         CheckAdOnline.on = Utility.CheckOnline
         

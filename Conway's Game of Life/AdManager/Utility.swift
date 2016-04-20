@@ -17,7 +17,7 @@ class Utility {
    
     static var isAd5 = false//start app
     static var isAd6 = true//revmob
-    
+    static var isAd7 = true //vungle
     static var CheckOnline = true // on/off check ad online
     static var GBannerAdUnit: String = ""
     static var GFullAdUnit: String = ""
@@ -29,6 +29,7 @@ class Utility {
     static var Amazonkey = ""
     static var StartAppAppID = ""
     static var StartAppAccountID=""
+    static var VungleID = ""
     
     static var isStopAdmobAD = false
     
@@ -59,7 +60,7 @@ class Utility {
         AdcolonyZoneID = data.AdcolonyZoneID
         AdmobTestDeviceID = data.TestDeviceID
         RevmobID = data.RevmobID
-        
+        VungleID = data.VungleID
 //        StartAppAppID = data.StartAppID
 //        StartAppAccountID = data.StartAppAccountID
         //get edit ad unit ID for Admob
@@ -129,6 +130,13 @@ class Utility {
             
         }
         
+        if(NSUserDefaults.standardUserDefaults().objectForKey("ad7") != nil)
+        {
+            isAd7 = NSUserDefaults.standardUserDefaults().objectForKey("ad7") as! Bool
+            
+        }
+        
+
         
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad") != nil)
@@ -236,11 +244,12 @@ class Utility {
         
         let completionBlock: () -> Void = {
             RevMobAds.session().showFullscreen()
+        
             
             self.RevmobFull()
             self.RevmobVideo()
             RevmobPopup()
-            self.RevmobBanner()
+            ///self.RevmobBanner()
         }
         let errorBlock: (NSError!) -> Void = {error in
             // check the error

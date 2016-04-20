@@ -35,7 +35,7 @@ class Data {
     let RevmobID: String = "57135aefc7313d2c02f2449d"
     
     //Vungle ID
-    let VungleID: String = ""
+    let VungleID: String = "1078567033"
     
     
     

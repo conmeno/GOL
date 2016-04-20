@@ -10,7 +10,7 @@
         <!--Ad Manager View-->
         <scene sceneID="MDb-VE-VLt">
             <objects>
-                <viewController storyboardIdentifier="AdView1" id="mQ7-qi-MMn" customClass="AdManagerView" customModule="Game10240" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdView1" id="mQ7-qi-MMn" customClass="AdManagerView" customModule="Conway_s_GoL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RkD-vD-QMJ"/>
                         <viewControllerLayoutGuide type="bottom" id="lsm-U3-Fee"/>
@@ -185,6 +185,24 @@
                                     <action selector="sw6Action:" destination="mQ7-qi-MMn" eventType="valueChanged" id="xKU-ct-ZT2"/>
                                 </connections>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9P-m0-bya">
+                                <rect key="frame" x="26" y="94" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="230" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sw7Action:" destination="mQ7-qi-MMn" eventType="valueChanged" id="2MO-GS-PbS"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VungLe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-oP-LKb">
+                                <rect key="frame" x="66" y="65" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="83" y="235" width="97" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,6 +227,8 @@
                                 <exclude reference="J1P-zF-qHq"/>
                                 <exclude reference="Lnt-f8-sMg"/>
                                 <exclude reference="GQf-E4-aVG"/>
+                                <exclude reference="Z9P-m0-bya"/>
+                                <exclude reference="0mD-oP-LKb"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0se-Mu-mSP"/>
@@ -233,6 +253,8 @@
                                 <include reference="J1P-zF-qHq"/>
                                 <include reference="Lnt-f8-sMg"/>
                                 <include reference="GQf-E4-aVG"/>
+                                <include reference="Z9P-m0-bya"/>
+                                <include reference="0mD-oP-LKb"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0se-Mu-mSP"/>
@@ -251,6 +273,7 @@
                         <outlet property="sw4" destination="7YG-R5-FrN" id="2vp-dW-aea"/>
                         <outlet property="sw5" destination="FVn-3W-dcs" id="T3y-fK-y46"/>
                         <outlet property="sw6" destination="GQf-E4-aVG" id="9is-Pn-6ou"/>
+                        <outlet property="sw7" destination="Z9P-m0-bya" id="EFk-cX-Du0"/>
                         <outlet property="textDevice" destination="spA-Qb-dIS" id="vz2-5B-6lI"/>
                     </connections>
                 </viewController>
