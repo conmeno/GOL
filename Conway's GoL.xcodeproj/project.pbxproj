@@ -25,6 +25,11 @@
 		961FA16C1CC76B8B00C0B528 /* VungleSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 965E81511CC6355C00126BCB /* VungleSDK.framework */; };
 		9624A9F11CC77AB200C530F1 /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */; };
 		9624A9F21CC77AB200C530F1 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9F01CC77AB200C530F1 /* UnityAds.framework */; };
+		9624A9F81CC8BA9900C530F1 /* Supersonic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9F71CC8BA9900C530F1 /* Supersonic.framework */; };
+		9624A9FA1CC8BAD200C530F1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9F91CC8BAD200C530F1 /* MobileCoreServices.framework */; };
+		9624A9FE1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9FD1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a */; };
+		9624AA001CC8CEBF00C530F1 /* libFlurry_7.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9FF1CC8CEBE00C530F1 /* libFlurry_7.5.2.a */; };
+		9624AA041CC8CF4400C530F1 /* SUFlurryAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624AA031CC8CF4400C530F1 /* SUFlurryAdapter.framework */; };
 		965E81461CC62FDF00126BCB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81451CC62FDF00126BCB /* CFNetwork.framework */; };
 		965E81481CC6301D00126BCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81471CC6301D00126BCB /* QuartzCore.framework */; };
 		965E814A1CC6306200126BCB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81491CC6306200126BCB /* libz.tbd */; };
@@ -99,6 +104,11 @@
 		91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
 		9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UnityAds.bundle; sourceTree = "<group>"; };
 		9624A9F01CC77AB200C530F1 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
+		9624A9F71CC8BA9900C530F1 /* Supersonic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Supersonic.framework; sourceTree = "<group>"; };
+		9624A9F91CC8BAD200C530F1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9624A9FD1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds_7.5.2.a; sourceTree = "<group>"; };
+		9624A9FF1CC8CEBE00C530F1 /* libFlurry_7.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.5.2.a; sourceTree = "<group>"; };
+		9624AA031CC8CF4400C530F1 /* SUFlurryAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SUFlurryAdapter.framework; sourceTree = "<group>"; };
 		965E81451CC62FDF00126BCB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		965E81471CC6301D00126BCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		965E81491CC6306200126BCB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -148,6 +158,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967976ED1C522A7100C53618 /* CoreLocation.framework in Frameworks */,
+				9670A92B1C64924200EEF360 /* Security.framework in Frameworks */,
+				9624A9FA1CC8BAD200C530F1 /* MobileCoreServices.framework in Frameworks */,
 				965E814A1CC6306200126BCB /* libz.tbd in Frameworks */,
 				966A051B1C9BBBA600A11F57 /* WebKit.framework in Frameworks */,
 				966A051F1C9BBBB800A11F57 /* StoreKit.framework in Frameworks */,
@@ -161,23 +174,25 @@
 				966A05181C9BBB9D00A11F57 /* CoreAudio.framework in Frameworks */,
 				966A05191C9BBB9D00A11F57 /* CoreFoundation.framework in Frameworks */,
 				967976EC1C522A7100C53618 /* CoreGraphics.framework in Frameworks */,
-				967976ED1C522A7100C53618 /* CoreLocation.framework in Frameworks */,
 				966A05211C9BBCC400A11F57 /* AdColony.framework in Frameworks */,
 				967976F71C522A8F00C53618 /* CoreMedia.framework in Frameworks */,
 				967976E91C522A6800C53618 /* CoreTelephony.framework in Frameworks */,
 				9670A92D1C64926600EEF360 /* WebKit.framework in Frameworks */,
-				9670A92B1C64924200EEF360 /* Security.framework in Frameworks */,
 				9670A9281C64923400EEF360 /* libsqlite3.0.tbd in Frameworks */,
 				9670A9291C64923400EEF360 /* libsqlite3.tbd in Frameworks */,
 				9670A9251C647E8E00EEF360 /* GoogleMobileAds.framework in Frameworks */,
 				967976F31C522A8700C53618 /* AdSupport.framework in Frameworks */,
+				9624AA001CC8CEBF00C530F1 /* libFlurry_7.5.2.a in Frameworks */,
 				967976F41C522A8700C53618 /* AudioToolbox.framework in Frameworks */,
 				967976F51C522A8700C53618 /* AVFoundation.framework in Frameworks */,
 				1BBF52471CC3853E00879E77 /* RevMobAds.framework in Frameworks */,
 				967976EF1C522A7900C53618 /* CoreBluetooth.framework in Frameworks */,
 				967976E61C522A6000C53618 /* EventKit.framework in Frameworks */,
 				967976E71C522A6000C53618 /* EventKitUI.framework in Frameworks */,
+				9624A9F81CC8BA9900C530F1 /* Supersonic.framework in Frameworks */,
+				9624A9FE1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a in Frameworks */,
 				1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */,
+				9624AA041CC8CF4400C530F1 /* SUFlurryAdapter.framework in Frameworks */,
 				1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */,
 				967976E11C522A5300C53618 /* MediaPlayer.framework in Frameworks */,
 				967976DF1C522A4C00C53618 /* MessageUI.framework in Frameworks */,
@@ -200,6 +215,11 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
+				9624AA031CC8CF4400C530F1 /* SUFlurryAdapter.framework */,
+				9624A9FF1CC8CEBE00C530F1 /* libFlurry_7.5.2.a */,
+				9624A9FD1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a */,
+				9624A9F91CC8BAD200C530F1 /* MobileCoreServices.framework */,
+				9624A9F71CC8BA9900C530F1 /* Supersonic.framework */,
 				9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */,
 				9624A9F01CC77AB200C530F1 /* UnityAds.framework */,
 				965E81511CC6355C00126BCB /* VungleSDK.framework */,

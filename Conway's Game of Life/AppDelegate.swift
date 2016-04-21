@@ -57,6 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UnityAdsDelegate  {
             }
         }
         
+        if(Utility.isAd8)
+        {
+            Supersonic.sharedInstance().setISDelegate(nil)
+            Supersonic.sharedInstance().initISWithAppKey(Utility.SonicID, withUserId: "")
+            Supersonic.sharedInstance().loadIS()
+        }
+        
         
         return true
     }

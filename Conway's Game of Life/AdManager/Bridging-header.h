@@ -23,6 +23,22 @@
  #import <VungleSDK/VungleSDK.h>
 #import <UnityAds/UnityAds.h>
 //#import <StartApp/StartApp.h>
+
+
+#import "Supersonic/Supersonic.h"
+#import "Supersonic/SupersonicConfiguration.h"
+#import "Supersonic/SupersonicConfigurationProtocol.h"
+#import "Supersonic/SupersonicEventsReporting.h"
+#import "Supersonic/SupersonicGender.h"
+#import "Supersonic/SupersonicIntegrationHelper.h"
+#import "Supersonic/SupersonicISDelegate.h"
+#import "Supersonic/SupersonicLOGDelegate.h"
+#import "Supersonic/SupersonicOWDelegate.h"
+#import "Supersonic/SupersonicPlacementInfo.h"
+#import "Supersonic/SupersonicRVDelegate.h"
+#import "Supersonic/SUSupersonicAdsConfiguration.h"
+
+
 #include <ifaddrs.h>
 #import "cclass.h"
 

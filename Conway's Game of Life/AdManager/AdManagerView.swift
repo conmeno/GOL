@@ -167,7 +167,7 @@ class AdManagerView: UIViewController
         
         sw5.on = Utility.isAd5
         sw6.on = Utility.isAd6
-        
+        sw7.on = Utility.isAd7
         sw8.on = Utility.isAd8
 
         CheckVPN.on = Utility.CheckVPN

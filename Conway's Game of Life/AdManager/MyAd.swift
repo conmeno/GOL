@@ -101,13 +101,25 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 showVungle()
             }
             
-            if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 )
+            
+            if(Utility.isAd8)
+            {
+                SupersonicIntegrationHelper.validateIntegration()
+                if(Supersonic.sharedInstance().isInterstitialAvailable())
+                {
+                
+                    Supersonic.sharedInstance().showISWithViewController(viewController)
+                }
+              
+            }
+            
+            if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 || Utility.isAd8 )
             {
                 self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
             }
             
-            showAmazonBanner()
-            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+//            showAmazonBanner()
+//            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
             if(Utility.isAd3)
             {
                 if(Utility.isAd6)
@@ -295,6 +307,18 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 ShowUnity()
                 
             }
+            
+            if(Utility.isAd8)
+            {
+                if(Supersonic.sharedInstance().isInterstitialAvailable())
+                {
+                    
+                    Supersonic.sharedInstance().showISWithViewController(viewController)
+                }
+                print("super sonic")
+            }
+            
+            
             
         }
         

@@ -18,8 +18,8 @@ class Utility {
     static var isAd5 = false// ==>UnityAds
     static var isAd6 = false//revmob
     
-    static var isAd7 = true //vungle
-    static var isAd8 = false //Sonic
+    static var isAd7 = false //vungle
+    static var isAd8 = true //Sonic
     
     
     static var CheckOnline = true // on/off check ad online
