@@ -43,13 +43,10 @@ class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(Utility.showOtherAd)
-        {
+        
             let myad = MyAd(root: self)
             myad.ViewDidload()
             
-        }
-        
         
         if(Utility.isAd2)
         {

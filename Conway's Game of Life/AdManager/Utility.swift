@@ -12,14 +12,14 @@ class Utility {
     
     static var isAd1 = false//admob full
     static var isAd2 = false//Admob Banner
-    static var isAd3 = true//Amazon
-    static var isAd4 = true//Adcolony
+    static var isAd3 = false//Amazon
+    static var isAd4 = false//Adcolony
    
     static var isAd5 = false// ==>UnityAds
-    static var isAd6 = true//revmob
+    static var isAd6 = false//revmob
     
     static var isAd7 = true //vungle
-    static var isAd8 = true //Sonic
+    static var isAd8 = false //Sonic
     
     
     static var CheckOnline = true // on/off check ad online
@@ -35,9 +35,12 @@ class Utility {
     static var StartAppAccountID=""
     static var VungleID = ""
     static var UnityGameID = ""
+    static var SonicID = ""
     static var isStopAdmobAD = false
     
-    static var showOtherAd = false //showAd (ngoai tru Admob Banner)
+    static var CheckVPN = true
+    
+    //static var showOtherAd = false //showAd (ngoai tru Admob Banner)
     
     static var abc = cclass()
     static var data = Data()
@@ -66,12 +69,8 @@ class Utility {
         RevmobID = data.RevmobID
         VungleID = data.VungleID
         UnityGameID = data.UnityGameId
-        
-//        StartAppAppID = data.StartAppID
-//        StartAppAccountID = data.StartAppAccountID
-        //get edit ad unit ID for Admob
-        
-      
+        SonicID = data.SonicID
+ 
         
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("adOnline") != nil)
@@ -149,11 +148,9 @@ class Utility {
 
         
         
-        if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad") != nil)
+        if(NSUserDefaults.standardUserDefaults().objectForKey("check-VPN") != nil)
         {
-            showOtherAd = NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad") as! Bool
-            
-            print( NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad"))
+            CheckVPN = NSUserDefaults.standardUserDefaults().objectForKey("check-VPN") as! Bool
             
         }
         
@@ -164,10 +161,10 @@ class Utility {
         
         SetupAdOnline()
         
-        if(Utility.isCDMA())
-        {
-            showOtherAd = true
-        }
+//        if(Utility.isCDMA())
+//        {
+//            showOtherAd = true
+//        }
         
         
     }
@@ -218,19 +215,19 @@ class Utility {
             
         }
         
-        //get CDMA status
-        if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") != nil)
-        {
-            let tempCDMA = NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") as! String
-            if(tempCDMA == "true")
-            {
-                showOtherAd = true
-            }else
-            {
-                showOtherAd = false
-            }
-            
-        }
+//        //get CDMA status
+//        if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") != nil)
+//        {
+//            let tempCDMA = NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") as! String
+//            if(tempCDMA == "true")
+//            {
+//                showOtherAd = true
+//            }else
+//            {
+//                showOtherAd = false
+//            }
+//            
+//        }
         
         
     }

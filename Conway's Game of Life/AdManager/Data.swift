@@ -13,7 +13,7 @@ class Data {
     //Snake 1998 game
     
     //URL setup online
-    let AdURL: String = "http://www.tony.somee.com/golclassic.txt"
+    let AdURL: String = "http://www.tony.somee.com/golclassic-v3.txt"
     
     //google
     let gBanner : String = ""
@@ -39,6 +39,7 @@ class Data {
     
     let UnityGameId: String = "1061074"
     
+    let SonicID: String = "47bb4185"
     
     
     
