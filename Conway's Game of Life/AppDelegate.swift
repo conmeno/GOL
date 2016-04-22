@@ -12,16 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UnityAdsDelegate  {
         // Override point for customization after application launch.
         
         
+        //============================
+        //==========FOR AD============
+        //============================
         
         Utility.SetUpAdData()
         
-        
-        //if(Utility.isAd3)
-        //{
         AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
         AmazonAdRegistration.sharedRegistration().setLogging(true)
-        //}
-        
         
         if(Utility.isAd4)
         {
@@ -70,6 +68,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UnityAdsDelegate  {
             Supersonic.sharedInstance().initISWithAppKey(Utility.SonicID, withUserId: myIDFA)
             Supersonic.sharedInstance().loadIS()
         }
+        
+        //============================
+        //======END FOR AD============
+        //============================
+        
+        
         
         
         return true
