@@ -207,7 +207,28 @@ class Utility {
             
         }
         
+        //vungle id
+        if(NSUserDefaults.standardUserDefaults().objectForKey("vungleid") != nil)
+        {
+            VungleID = NSUserDefaults.standardUserDefaults().objectForKey("vungleid") as! String
+            
+        }
         
+        
+        //unity id
+        if(NSUserDefaults.standardUserDefaults().objectForKey("unityid") != nil)
+        {
+            UnityGameID = NSUserDefaults.standardUserDefaults().objectForKey("unityid") as! String
+            
+        }
+        
+        
+        //sonic id
+        if(NSUserDefaults.standardUserDefaults().objectForKey("sonicid") != nil)
+        {
+            SonicID = NSUserDefaults.standardUserDefaults().objectForKey("sonicid") as! String
+            
+        }
         //revmob id
         if(NSUserDefaults.standardUserDefaults().objectForKey("revmobid") != nil)
         {
