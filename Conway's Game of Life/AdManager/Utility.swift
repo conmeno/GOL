@@ -255,8 +255,8 @@ class Utility {
             
             self.RevmobFull()
             self.RevmobVideo()
-            RevmobPopup()
-            ///self.RevmobBanner()
+            //RevmobPopup()
+            self.RevmobBanner()
         }
         let errorBlock: (NSError!) -> Void = {error in
             // check the error

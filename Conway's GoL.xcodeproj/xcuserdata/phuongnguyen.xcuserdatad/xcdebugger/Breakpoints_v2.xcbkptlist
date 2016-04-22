@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Conway&apos;s Game of Life/AdManager/Utility.swift"
@@ -48,6 +48,85 @@
             startingLineNumber = "138"
             endingLineNumber = "138"
             landmarkName = "SetUpAdData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Conway&apos;s Game of Life/AdManager/MyAd.swift"
+            timestampString = "482992576.578327"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "540"
+            endingLineNumber = "540"
+            landmarkName = "CanShowAd()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Conway_s_GoL.MyAd.ViewDidload (Conway_s_GoL.MyAd)() -&gt; ()"
+                  moduleName = "Conway&apos;s GoL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phuongnguyen/Documents/Conway-s-Game-of-Life-master/Conway&apos;s%20Game%20of%20Life/GOL/Conway&apos;s%20Game%20of%20Life/AdManager/MyAd.swift"
+                  timestampString = "482992772.690327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "540"
+                  endingLineNumber = "540"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead&gt; of Conway_s_GoL.MyAd.CanShowAd (Conway_s_GoL.MyAd)() -&gt; Swift.Bool"
+                  moduleName = "Conway&apos;s GoL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phuongnguyen/Documents/Conway-s-Game-of-Life-master/Conway&apos;s%20Game%20of%20Life/GOL/Conway&apos;s%20Game%20of%20Life/AdManager/MyAd.swift"
+                  timestampString = "482992772.690776"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "540"
+                  endingLineNumber = "540"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead and Owned To Guaranteed&gt; of Conway_s_GoL.MyAd.timerAd30 (Conway_s_GoL.MyAd)(__ObjC.NSTimer) -&gt; ()"
+                  moduleName = "Conway&apos;s GoL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phuongnguyen/Documents/Conway-s-Game-of-Life-master/Conway&apos;s%20Game%20of%20Life/GOL/Conway&apos;s%20Game%20of%20Life/AdManager/MyAd.swift"
+                  timestampString = "482992772.693182"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "540"
+                  endingLineNumber = "540"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Conway&apos;s Game of Life/AdManager/MyAd.swift"
+            timestampString = "482992747.474978"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "542"
+            endingLineNumber = "542"
+            landmarkName = "CanShowAd()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

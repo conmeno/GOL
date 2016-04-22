@@ -30,6 +30,7 @@
 		9624A9FE1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9FD1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a */; };
 		9624AA001CC8CEBF00C530F1 /* libFlurry_7.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9FF1CC8CEBE00C530F1 /* libFlurry_7.5.2.a */; };
 		9624AA041CC8CF4400C530F1 /* SUFlurryAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624AA031CC8CF4400C530F1 /* SUFlurryAdapter.framework */; };
+		9624AA061CC9CC0200C530F1 /* ISDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9624AA051CC9CC0200C530F1 /* ISDelegate.swift */; };
 		965E81461CC62FDF00126BCB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81451CC62FDF00126BCB /* CFNetwork.framework */; };
 		965E81481CC6301D00126BCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81471CC6301D00126BCB /* QuartzCore.framework */; };
 		965E814A1CC6306200126BCB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81491CC6306200126BCB /* libz.tbd */; };
@@ -109,6 +110,7 @@
 		9624A9FD1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds_7.5.2.a; sourceTree = "<group>"; };
 		9624A9FF1CC8CEBE00C530F1 /* libFlurry_7.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.5.2.a; sourceTree = "<group>"; };
 		9624AA031CC8CF4400C530F1 /* SUFlurryAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SUFlurryAdapter.framework; sourceTree = "<group>"; };
+		9624AA051CC9CC0200C530F1 /* ISDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ISDelegate.swift; path = AdManager/ISDelegate.swift; sourceTree = "<group>"; };
 		965E81451CC62FDF00126BCB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		965E81471CC6301D00126BCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		965E81491CC6306200126BCB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -330,6 +332,7 @@
 				966A050C1C9BBB7600A11F57 /* MyAd.swift */,
 				966A050D1C9BBB7600A11F57 /* StoryboardAD.storyboard */,
 				966A050E1C9BBB7600A11F57 /* Utility.swift */,
+				9624AA051CC9CC0200C530F1 /* ISDelegate.swift */,
 			);
 			name = Ad;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				91060A0D19ACE35A001FDC9D /* ViewController.swift in Sources */,
 				91060A3219ACEFE6001FDC9D /* CGOLModel.swift in Sources */,
 				966A05111C9BBB7600A11F57 /* cclass.m in Sources */,
+				9624AA061CC9CC0200C530F1 /* ISDelegate.swift in Sources */,
 				966A05151C9BBB7600A11F57 /* Utility.swift in Sources */,
 				91D8046F19AD22D000EBAE80 /* Helpers.swift in Sources */,
 				966A05131C9BBB7600A11F57 /* MyAd.swift in Sources */,

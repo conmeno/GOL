@@ -58,7 +58,9 @@ class ADXML: NSObject, NSXMLParserDelegate
         {
             NSUserDefaults.standardUserDefaults().setObject(boolSTR, forKey:"check-VPN")
             NSUserDefaults.standardUserDefaults().synchronize()
-            
+            NSUserDefaults.standardUserDefaults().setObject(false, forKey:"adOnline")
+            NSUserDefaults.standardUserDefaults().synchronize()
+
 
         }
         else if(currentNode == "ad1")

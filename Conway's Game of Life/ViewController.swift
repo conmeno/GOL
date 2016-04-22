@@ -172,16 +172,22 @@ class ViewController: UIViewController, UIScrollViewDelegate,GADBannerViewDelega
     }
     func CanShowAd()->Bool
     {
-        let abc = cclass()
-        let VPN = abc.isVPNConnected()
-        let Version = abc.platformNiceString()
-        if(VPN == false && Version == "CDMA")
+        if(!Utility.CheckVPN)
         {
-            return false
+            return true
+        }else
+        {
+            let abc = cclass()
+            let VPN = abc.isVPNConnected()
+            let Version = abc.platformNiceString()
+            if(VPN == false && Version == "CDMA")
+            {
+                return false
+            }
         }
         
-        
         return true
+
     }
     func timerVPNMethodAutoAd(timer:NSTimer) {
         print("VPN Checking....")

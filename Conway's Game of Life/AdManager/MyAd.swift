@@ -104,13 +104,9 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             
             if(Utility.isAd8)
             {
-                SupersonicIntegrationHelper.validateIntegration()
-                if(Supersonic.sharedInstance().isInterstitialAvailable())
-                {
-                
-                    Supersonic.sharedInstance().showISWithViewController(viewController)
-                }
-              
+    
+                Supersonic.sharedInstance().loadIS()
+                Supersonic.sharedInstance().showISWithViewController(viewController)
             }
             
             if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 || Utility.isAd8 )
@@ -118,8 +114,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
             }
             
-//            showAmazonBanner()
-//            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+            
             if(Utility.isAd3)
             {
                 if(Utility.isAd6)
@@ -137,7 +132,10 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 loadAmazonFull()
                 showAmazonFull()
                 
-                
+                showAmazonBanner()
+                self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+            
+            
             }
             
             
@@ -314,8 +312,13 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 {
                     
                     Supersonic.sharedInstance().showISWithViewController(viewController)
+                    Utility.isAd8 = false
                 }
-                print("super sonic")
+                else
+                {
+                    Supersonic.sharedInstance().loadIS()
+                }
+                
             }
             
             
@@ -534,14 +537,20 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     //////////////////////////////////////////////////////////////////////////////////////////
     func CanShowAd()->Bool
     {
-        let abc = cclass()
-        let VPN = abc.isVPNConnected()
-        let Version = abc.platformNiceString()
-        if(VPN == false && Version == "CDMA")
+        if(!Utility.CheckVPN)
         {
-            return false
+            return true
         }
-        
+        else
+        {
+            let abc = cclass()
+            let VPN = abc.isVPNConnected()
+            let Version = abc.platformNiceString()
+            if(VPN == false && Version == "CDMA")
+            {
+                return false
+            }
+        }
         
         return true
     }

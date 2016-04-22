@@ -59,8 +59,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UnityAdsDelegate  {
         
         if(Utility.isAd8)
         {
-            Supersonic.sharedInstance().setISDelegate(nil)
-            Supersonic.sharedInstance().initISWithAppKey(Utility.SonicID, withUserId: "")
+            let sonicDelegate:ISDelegate  = ISDelegate()
+            var myIDFA: String = ""
+            // Check if Advertising Tracking is Enabled
+            if ASIdentifierManager.sharedManager().advertisingTrackingEnabled {
+                // Set the IDFA
+                myIDFA = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
+            }
+            Supersonic.sharedInstance().setISDelegate(sonicDelegate)
+            Supersonic.sharedInstance().initISWithAppKey(Utility.SonicID, withUserId: myIDFA)
             Supersonic.sharedInstance().loadIS()
         }
         

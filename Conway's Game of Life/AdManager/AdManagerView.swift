@@ -125,22 +125,7 @@ class AdManagerView: UIViewController
     }
     
     
-    //    @IBAction func EditGoogle(sender: AnyObject) {
-    //        let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
-    //
-    //        let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("GoogleAdEditorView") as UIViewController
-    //
-    //        self.presentViewController(WebDetailView, animated: true, completion: nil)
-    //
-    //    }
-    //    @IBAction func EditChartboost(sender: AnyObject) {
-    //        let storyboard = UIStoryboard(name: "StoryboardAD", bundle: nil)
-    //
-    //        let WebDetailView = storyboard.instantiateViewControllerWithIdentifier("ChartboostAdEditorView") as UIViewController
-    //
-    //        self.presentViewController(WebDetailView, animated: true, completion: nil)
-    //    }
-    
+       
     func setupDevice()
     {
         
