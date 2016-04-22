@@ -120,8 +120,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 if(Utility.isAd6)
                 {
                     
-                    amazonLocationY = 20
-                }else
+                                    }else
                 {
                     amazonLocationY = (viewController.view?.bounds.height)! - 50
                 }
