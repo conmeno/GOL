@@ -10,6 +10,8 @@
 		1B60C4F01C6DCFCA005BBE59 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */; };
 		1B65C4E11C6B832A00111B76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */; };
 		1BBF52471CC3853E00879E77 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBF52461CC3853E00879E77 /* RevMobAds.framework */; };
+		1BBF52631CCC6E1400879E77 /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBF52621CCC6E1400879E77 /* VungleSDK.framework */; };
+		1BBF52651CCC6E4C00879E77 /* VungleSDK.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 1BBF52641CCC6E4C00879E77 /* VungleSDK.embeddedframework */; };
 		91060A0B19ACE35A001FDC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0A19ACE35A001FDC9D /* AppDelegate.swift */; };
 		91060A0D19ACE35A001FDC9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91060A0C19ACE35A001FDC9D /* ViewController.swift */; };
 		91060A1019ACE35A001FDC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91060A0E19ACE35A001FDC9D /* Main.storyboard */; };
@@ -22,7 +24,6 @@
 		91D8046D19AD02FC00EBAE80 /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046C19AD02FC00EBAE80 /* TileModel.swift */; };
 		91D8046F19AD22D000EBAE80 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8046E19AD22D000EBAE80 /* Helpers.swift */; };
 		91D8047519AD330E00EBAE80 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8047419AD330E00EBAE80 /* TwoWayBinding.swift */; };
-		961FA16C1CC76B8B00C0B528 /* VungleSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 965E81511CC6355C00126BCB /* VungleSDK.framework */; };
 		9624A9F11CC77AB200C530F1 /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */; };
 		9624A9F21CC77AB200C530F1 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9F01CC77AB200C530F1 /* UnityAds.framework */; };
 		9624A9F81CC8BA9900C530F1 /* Supersonic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9624A9F71CC8BA9900C530F1 /* Supersonic.framework */; };
@@ -34,8 +35,6 @@
 		965E81461CC62FDF00126BCB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81451CC62FDF00126BCB /* CFNetwork.framework */; };
 		965E81481CC6301D00126BCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81471CC6301D00126BCB /* QuartzCore.framework */; };
 		965E814A1CC6306200126BCB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81491CC6306200126BCB /* libz.tbd */; };
-		965E81501CC6351D00126BCB /* VungleSDK.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 965E814F1CC6351D00126BCB /* VungleSDK.embeddedframework */; };
-		965E81521CC6355C00126BCB /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965E81511CC6355C00126BCB /* VungleSDK.framework */; };
 		966A050F1C9BBB7600A11F57 /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A05061C9BBB7600A11F57 /* AdManagerView.swift */; };
 		966A05101C9BBB7600A11F57 /* ADXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966A05071C9BBB7600A11F57 /* ADXML.swift */; };
 		966A05111C9BBB7600A11F57 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 966A050A1C9BBB7600A11F57 /* cclass.m */; };
@@ -87,6 +86,8 @@
 		1B60C4EF1C6DCFCA005BBE59 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
 		1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1BBF52461CC3853E00879E77 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		1BBF52621CCC6E1400879E77 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
+		1BBF52641CCC6E4C00879E77 /* VungleSDK.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VungleSDK.embeddedframework; sourceTree = "<group>"; };
 		91060A0519ACE35A001FDC9D /* Conway's GoL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GoL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91060A0919ACE35A001FDC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91060A0A19ACE35A001FDC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +115,6 @@
 		965E81451CC62FDF00126BCB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		965E81471CC6301D00126BCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		965E81491CC6306200126BCB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		965E814F1CC6351D00126BCB /* VungleSDK.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VungleSDK.embeddedframework; sourceTree = "<group>"; };
-		965E81511CC6355C00126BCB /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
 		966A05061C9BBB7600A11F57 /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
 		966A05071C9BBB7600A11F57 /* ADXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADXML.swift; path = AdManager/ADXML.swift; sourceTree = "<group>"; };
 		966A05081C9BBB7600A11F57 /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
@@ -171,7 +170,6 @@
 				965E81461CC62FDF00126BCB /* CFNetwork.framework in Frameworks */,
 				966A05251C9BBD5600A11F57 /* Social.framework in Frameworks */,
 				966A05231C9BBD4500A11F57 /* CoreData.framework in Frameworks */,
-				965E81521CC6355C00126BCB /* VungleSDK.framework in Frameworks */,
 				966A051D1C9BBBAE00A11F57 /* libz.1.2.5.tbd in Frameworks */,
 				966A05181C9BBB9D00A11F57 /* CoreAudio.framework in Frameworks */,
 				966A05191C9BBB9D00A11F57 /* CoreFoundation.framework in Frameworks */,
@@ -199,6 +197,7 @@
 				967976E11C522A5300C53618 /* MediaPlayer.framework in Frameworks */,
 				967976DF1C522A4C00C53618 /* MessageUI.framework in Frameworks */,
 				967976DB1C522A3F00C53618 /* SystemConfiguration.framework in Frameworks */,
+				1BBF52631CCC6E1400879E77 /* VungleSDK.framework in Frameworks */,
 				967976D91C522A3900C53618 /* UIKit.framework in Frameworks */,
 				9624A9F21CC77AB200C530F1 /* UnityAds.framework in Frameworks */,
 			);
@@ -217,6 +216,8 @@
 		910609FC19ACE35A001FDC9D = {
 			isa = PBXGroup;
 			children = (
+				1BBF52641CCC6E4C00879E77 /* VungleSDK.embeddedframework */,
+				1BBF52621CCC6E1400879E77 /* VungleSDK.framework */,
 				9624AA031CC8CF4400C530F1 /* SUFlurryAdapter.framework */,
 				9624A9FF1CC8CEBE00C530F1 /* libFlurry_7.5.2.a */,
 				9624A9FD1CC8CEAC00C530F1 /* libFlurryAds_7.5.2.a */,
@@ -224,8 +225,6 @@
 				9624A9F71CC8BA9900C530F1 /* Supersonic.framework */,
 				9624A9EF1CC77AB200C530F1 /* UnityAds.bundle */,
 				9624A9F01CC77AB200C530F1 /* UnityAds.framework */,
-				965E81511CC6355C00126BCB /* VungleSDK.framework */,
-				965E814F1CC6351D00126BCB /* VungleSDK.embeddedframework */,
 				965E81491CC6306200126BCB /* libz.tbd */,
 				965E81471CC6301D00126BCB /* QuartzCore.framework */,
 				965E81451CC62FDF00126BCB /* CFNetwork.framework */,
@@ -426,10 +425,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9624A9F11CC77AB200C530F1 /* UnityAds.bundle in Resources */,
-				961FA16C1CC76B8B00C0B528 /* VungleSDK.framework in Resources */,
-				965E81501CC6351D00126BCB /* VungleSDK.embeddedframework in Resources */,
 				966A05141C9BBB7600A11F57 /* StoryboardAD.storyboard in Resources */,
 				91060A1019ACE35A001FDC9D /* Main.storyboard in Resources */,
+				1BBF52651CCC6E4C00879E77 /* VungleSDK.embeddedframework in Resources */,
 				91060A1219ACE35A001FDC9D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,10 +587,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
+					"$(PROJECT_DIR)/VungleSDK",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/VungleSDK";
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -622,10 +620,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
+					"$(PROJECT_DIR)/VungleSDK",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/VungleSDK";
 				INFOPLIST_FILE = "Conway's Game of Life/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
