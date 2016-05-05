@@ -105,14 +105,14 @@ class Utility {
         
         
         //GEt Ad unit online
-        
-        if(Utility.CheckOnline)
-        {
-            
-            let xmlSetup = ADXML()
-            xmlSetup.LoadXML()
-        }
-        SetupAdOnline()
+//        
+//        if(Utility.CheckOnline)
+//        {
+//            
+//            let xmlSetup = ADXML()
+//            xmlSetup.LoadXML()
+//        }
+//        SetupAdOnline()
         
         
         
