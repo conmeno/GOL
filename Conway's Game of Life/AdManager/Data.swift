@@ -10,41 +10,30 @@ import Foundation
 
 class Data {
     
-    //Snake 1998 game
+    //5120 game
     
     //URL setup online
-    let AdURL: String = "http://webappchannel.com/tonyapp/gol1970-v4.txt"
+     let AdURL: String = "http://webappchannel.com/v5/conway1970_v5.txt"
     
     //google
-    let gBanner : String = "ca-app-pub-2767935542217864/4801527832"
-    let gFull : String = "ca-app-pub-2767935542217864/6278261035"
-    let TestDeviceID: String = "25229a4d09c90bcec58dec27036a470b"
+    let gBanner : String = ""
+    let gFull : String = ""
+    let TestDeviceID: String = ""
     
-    
+
     //chartboost
     let cAppID: String = ""
     let cSign : String = ""
     //amazon
-    let AmazonKey: String = "0bed35be5ed04f2f821fd2cdd5b35627"
+    let AmazonKey: String = ""
     
     //adcolony
-    let AdcolonyAppID: String = "app67e502f857eb464fa0"
-    let AdcolonyZoneID: String = "vz462b0a9cfbdf481f86"
-    
-   
-    
+    let AdcolonyAppID: String = ""
+    let AdcolonyZoneID: String = ""
     
     //revmob appID
-    let RevmobID: String = "573c8500dbfa7c5b0b4b8253"
-    
-    //Vungle ID
-    let VungleID: String = ""
-    
-    let UnityGameId: String = ""
-    
-    let SonicID: String = ""
-    
-    
+    let RevmobID: String = ""
+       
     
     
     
