@@ -79,13 +79,13 @@
 		1B105A4E1CECBAAF0066BA2C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1B105A4F1CECBAAF0066BA2C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1B65C4DF1C6B832A00111B76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		91060A0519ACE35A001FDC9D /* Conway's GOL 1970.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GOL 1970.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91060A0519ACE35A001FDC9D /* Conway's GOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's GOL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91060A0919ACE35A001FDC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91060A0A19ACE35A001FDC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91060A0C19ACE35A001FDC9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91060A0F19ACE35A001FDC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91060A1119ACE35A001FDC9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		91060A1719ACE35A001FDC9D /* Conway's GOL 1970.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Conway's GOL 1970.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91060A1719ACE35A001FDC9D /* Conway's GOL.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Conway's GOL.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91060A1C19ACE35A001FDC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91060A1D19ACE35A001FDC9D /* Conway_s_Game_of_LifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conway_s_Game_of_LifeTests.swift; sourceTree = "<group>"; };
 		91060A2719ACE38A001FDC9D /* CGOLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGOLView.swift; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 		91060A0619ACE35A001FDC9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91060A0519ACE35A001FDC9D /* Conway's GOL 1970.app */,
-				91060A1719ACE35A001FDC9D /* Conway's GOL 1970.xctest */,
+				91060A0519ACE35A001FDC9D /* Conway's GOL.app */,
+				91060A1719ACE35A001FDC9D /* Conway's GOL.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,9 +310,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91060A0419ACE35A001FDC9D /* Conway's GOL 1970 */ = {
+		91060A0419ACE35A001FDC9D /* Conway's GOL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91060A2119ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOL 1970" */;
+			buildConfigurationList = 91060A2119ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOL" */;
 			buildPhases = (
 				91060A0119ACE35A001FDC9D /* Sources */,
 				91060A0219ACE35A001FDC9D /* Frameworks */,
@@ -322,14 +322,14 @@
 			);
 			dependencies = (
 			);
-			name = "Conway's GOL 1970";
+			name = "Conway's GOL";
 			productName = "Conway's Game of Life";
-			productReference = 91060A0519ACE35A001FDC9D /* Conway's GOL 1970.app */;
+			productReference = 91060A0519ACE35A001FDC9D /* Conway's GOL.app */;
 			productType = "com.apple.product-type.application";
 		};
-		91060A1619ACE35A001FDC9D /* Conway's GOL 1970Tests */ = {
+		91060A1619ACE35A001FDC9D /* Conway's GOLTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91060A2419ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOL 1970Tests" */;
+			buildConfigurationList = 91060A2419ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOLTests" */;
 			buildPhases = (
 				91060A1319ACE35A001FDC9D /* Sources */,
 				91060A1419ACE35A001FDC9D /* Frameworks */,
@@ -340,9 +340,9 @@
 			dependencies = (
 				91060A1919ACE35A001FDC9D /* PBXTargetDependency */,
 			);
-			name = "Conway's GOL 1970Tests";
+			name = "Conway's GOLTests";
 			productName = "Conway's Game of LifeTests";
-			productReference = 91060A1719ACE35A001FDC9D /* Conway's GOL 1970.xctest */;
+			productReference = 91060A1719ACE35A001FDC9D /* Conway's GOL.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -371,7 +371,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 91060A0019ACE35A001FDC9D /* Build configuration list for PBXProject "Conway's GOL 1970" */;
+			buildConfigurationList = 91060A0019ACE35A001FDC9D /* Build configuration list for PBXProject "Conway's GOL" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -384,8 +384,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91060A0419ACE35A001FDC9D /* Conway's GOL 1970 */,
-				91060A1619ACE35A001FDC9D /* Conway's GOL 1970Tests */,
+				91060A0419ACE35A001FDC9D /* Conway's GOL */,
+				91060A1619ACE35A001FDC9D /* Conway's GOLTests */,
 			);
 		};
 /* End PBXProject section */
@@ -446,7 +446,7 @@
 /* Begin PBXTargetDependency section */
 		91060A1919ACE35A001FDC9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 91060A0419ACE35A001FDC9D /* Conway's GOL 1970 */;
+			target = 91060A0419ACE35A001FDC9D /* Conway's GOL */;
 			targetProxy = 91060A1819ACE35A001FDC9D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -565,8 +565,8 @@
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "htmlgame3008.Conway-s-Game-of-Life-1970";
-				PRODUCT_NAME = "Conway's GOL 1970";
+				PRODUCT_BUNDLE_IDENTIFIER = "game3007.Conway-s-Game-of-Life";
+				PRODUCT_NAME = "Conway's GOL";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Conway's Game of Life/AdManager/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -597,8 +597,8 @@
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "htmlgame3008.Conway-s-Game-of-Life-1970";
-				PRODUCT_NAME = "Conway's GOL 1970";
+				PRODUCT_BUNDLE_IDENTIFIER = "game3007.Conway-s-Game-of-Life";
+				PRODUCT_NAME = "Conway's GOL";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Conway's Game of Life/AdManager/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -620,8 +620,8 @@
 				INFOPLIST_FILE = "Conway's Game of LifeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.ilijatovilo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "Conway's GOL 1970";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Conway's GOL 1970.app/Conway's GOL 1970";
+				PRODUCT_NAME = "Conway's GOL";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Conway's GOL.app/Conway's GOL";
 			};
 			name = Debug;
 		};
@@ -636,15 +636,15 @@
 				INFOPLIST_FILE = "Conway's Game of LifeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.ilijatovilo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "Conway's GOL 1970";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Conway's GOL 1970.app/Conway's GOL 1970";
+				PRODUCT_NAME = "Conway's GOL";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Conway's GOL.app/Conway's GOL";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91060A0019ACE35A001FDC9D /* Build configuration list for PBXProject "Conway's GOL 1970" */ = {
+		91060A0019ACE35A001FDC9D /* Build configuration list for PBXProject "Conway's GOL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91060A1F19ACE35A001FDC9D /* Debug */,
@@ -653,7 +653,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91060A2119ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOL 1970" */ = {
+		91060A2119ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91060A2219ACE35A001FDC9D /* Debug */,
@@ -662,7 +662,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91060A2419ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOL 1970Tests" */ = {
+		91060A2419ACE35A001FDC9D /* Build configuration list for PBXNativeTarget "Conway's GOLTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91060A2519ACE35A001FDC9D /* Debug */,
